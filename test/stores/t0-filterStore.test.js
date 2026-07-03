@@ -60,4 +60,8 @@ describe('T0 - filterStore 核心行为', () => {
     store.setTab('skills')
     expect(store.currentTab).toBe('skills')
   })
+
+  it('renderLimit 默认值为 200', () => {
+    expect(store.renderLimit).toBe(200)
+  })
 })

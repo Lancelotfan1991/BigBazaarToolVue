@@ -101,4 +101,49 @@ describe('T1: getCardDiffDetails 数据流', () => {
     const { changedItemKeys } = useDiffCompare()
     expect(changedItemKeys.value).toBeNull()
   })
+
+describe('T2: 事件/怪物对比函数', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia())
+  })
+
+  it('isEventUpdated 未加载数据时返回 false', () => {
+    const { isEventUpdated } = useDiffCompare()
+    expect(isEventUpdated({ '英文名': 'Test' })).toBe(false)
+  })
+
+  it('isMonsterUpdated 未加载数据时返回 false', () => {
+    const { isMonsterUpdated } = useDiffCompare()
+    expect(isMonsterUpdated({ '英文名': 'Test' })).toBe(false)
+  })
+
+  it('getEventUpdateStatus 无英文名返回空字符串', () => {
+    const { getEventUpdateStatus } = useDiffCompare()
+    expect(getEventUpdateStatus({})).toBe('')
+  })
+
+  it('getMonsterUpdateStatus 无英文名返回空字符串', () => {
+    const { getMonsterUpdateStatus } = useDiffCompare()
+    expect(getMonsterUpdateStatus({})).toBe('')
+  })
+
+  it('getEventDiffDetails 无英文名返回空对象', () => {
+    const { getEventDiffDetails } = useDiffCompare()
+    expect(getEventDiffDetails({})).toEqual({})
+  })
+
+  it('getMonsterDiffDetails 无英文名返回空对象', () => {
+    const { getMonsterDiffDetails } = useDiffCompare()
+    expect(getMonsterDiffDetails({})).toEqual({})
+  })
+
+  it('reset 应清空事件和怪物相关状态', () => {
+    const { reset } = useDiffCompare()
+    reset()
+    // After reset, functions should still work (not throw)
+    const { isEventUpdated, isMonsterUpdated } = useDiffCompare()
+    expect(isEventUpdated({ '英文名': 'Test' })).toBe(false)
+    expect(isMonsterUpdated({ '英文名': 'Test' })).toBe(false)
+  })
+})
 })

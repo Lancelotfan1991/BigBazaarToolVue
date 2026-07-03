@@ -98,6 +98,14 @@ export function useDiffCompare() {
   const prevSeasonData = ref(null)
   const prevItemKeys = ref(null)
   const prevSkillKeys = ref(null)
+  const prevEventsData = ref(null)
+  const prevEventKeys = ref(null)
+  const changedEventKeys = ref(null)
+  const eventDiffMap = ref(null)
+  const prevMonstersData = ref(null)
+  const prevMonsterKeys = ref(null)
+  const changedMonsterKeys = ref(null)
+  const monsterDiffMap = ref(null)
   const changedItemKeys = ref(null)
   const changedSkillKeys = ref(null)
   const itemDiffMap = ref(null)
@@ -139,6 +147,52 @@ export function useDiffCompare() {
     console.log('[Diff] S16 vs S15:', changedItemKeys.value.size, '物品变更,', changedSkillKeys.value.size, '技能变更')
   }
 
+
+  async function loadPrevEvents() {
+    if (prevEventsData.value) return
+    const resp = await fetch('/data-s15/events.json')
+    if (!resp.ok) return
+    prevEventsData.value = await resp.json()
+    prevEventKeys.value = new Set((prevEventsData.value['物品'] || []).map(i => i['英文名']))
+    changedEventKeys.value = new Set()
+    eventDiffMap.value = new Map()
+
+    const prevEvents = Object.fromEntries((prevEventsData.value['物品'] || []).map(i => [i['英文名'], i]))
+    const currentEvents = dataStore.currentData?.['物品'] || []
+
+    for (const ev of currentEvents) {
+      const key = ev['英文名']
+      if (!key) continue
+      if (!prevEvents[key]) { changedEventKeys.value.add(key); eventDiffMap.value.set(key, { isNew: true }); continue }
+      const dm = buildDiffMap(ev, prevEvents[key])
+      if (Object.keys(dm).length) { changedEventKeys.value.add(key); eventDiffMap.value.set(key, dm) }
+    }
+    console.log('[Diff] Events:', changedEventKeys.value.size, 'changes')
+  }
+
+
+  async function loadPrevMonsters() {
+    if (prevMonstersData.value) return
+    const resp = await fetch('/data-s15/monsters.json')
+    if (!resp.ok) return
+    prevMonstersData.value = await resp.json()
+    prevMonsterKeys.value = new Set((prevMonstersData.value['物品'] || []).map(i => i['英文名']))
+    changedMonsterKeys.value = new Set()
+    monsterDiffMap.value = new Map()
+
+    const prevMonsters = Object.fromEntries((prevMonstersData.value['物品'] || []).map(i => [i['英文名'], i]))
+    const currentMonsters = dataStore.currentData?.['物品'] || []
+
+    for (const m of currentMonsters) {
+      const key = m['英文名']
+      if (!key) continue
+      if (!prevMonsters[key]) { changedMonsterKeys.value.add(key); monsterDiffMap.value.set(key, { isNew: true }); continue }
+      const dm = buildDiffMap(m, prevMonsters[key])
+      if (Object.keys(dm).length) { changedMonsterKeys.value.add(key); monsterDiffMap.value.set(key, dm) }
+    }
+    console.log('[Diff] Monsters:', changedMonsterKeys.value.size, 'changes')
+  }
+
   function isCardUpdated(card, tab) {
     if (!prevSeasonData.value) return false
     const key = card['英文名']
@@ -171,10 +225,62 @@ export function useDiffCompare() {
     return map?.get(key) || {}
   }
 
+
+  function isEventUpdated(card) {
+    if (!prevEventsData.value) return false
+    const key = card['英文名']
+    if (!key) return false
+    if (!prevEventKeys.value.has(key)) return true
+    return changedEventKeys.value.has(key)
+  }
+
+  function getEventUpdateStatus(card) {
+    const key = card['英文名']
+    if (!key) return ''
+    if (!prevEventKeys.value?.has(key)) return 'new'
+    return changedEventKeys.value?.has(key) ? 'updated' : ''
+  }
+
+  function getEventDiffDetails(card) {
+    const key = card['英文名']
+    if (!key) return {}
+    return eventDiffMap.value?.get(key) || {}
+  }
+
+
+  function isMonsterUpdated(card) {
+    if (!prevMonstersData.value) return false
+    const key = card['英文名']
+    if (!key) return false
+    if (!prevMonsterKeys.value.has(key)) return true
+    return changedMonsterKeys.value.has(key)
+  }
+
+  function getMonsterUpdateStatus(card) {
+    const key = card['英文名']
+    if (!key) return ''
+    if (!prevMonsterKeys.value?.has(key)) return 'new'
+    return changedMonsterKeys.value?.has(key) ? 'updated' : ''
+  }
+
+  function getMonsterDiffDetails(card) {
+    const key = card['英文名']
+    if (!key) return {}
+    return monsterDiffMap.value?.get(key) || {}
+  }
+
   function reset() {
     prevSeasonData.value = null
     prevItemKeys.value = null
     prevSkillKeys.value = null
+    prevEventsData.value = null
+    prevEventKeys.value = null
+    changedEventKeys.value = null
+    eventDiffMap.value = null
+    prevMonstersData.value = null
+    prevMonsterKeys.value = null
+    changedMonsterKeys.value = null
+    monsterDiffMap.value = null
     changedItemKeys.value = null
     changedSkillKeys.value = null
     itemDiffMap.value = null
@@ -183,6 +289,9 @@ export function useDiffCompare() {
 
   return {
     prevSeasonData, changedItemKeys, changedSkillKeys,
-    loadPrevSeason, isCardUpdated, getCardUpdateStatus, getCardDiffDetails, buildDiffMap, reset
+    loadPrevSeason, loadPrevEvents, isCardUpdated, getCardUpdateStatus, getCardDiffDetails,
+    isEventUpdated, getEventUpdateStatus, getEventDiffDetails,
+    loadPrevMonsters, isMonsterUpdated, getMonsterUpdateStatus, getMonsterDiffDetails,
+    buildDiffMap, reset
   }
 }

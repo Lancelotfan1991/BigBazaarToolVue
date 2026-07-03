@@ -6,7 +6,7 @@ export const useFilterStore = defineStore('filter', () => {
   const currentScope = ref('all')
   const searchQuery = ref('')
   const sortBy = ref('name')
-  const renderLimit = ref(40)
+  const renderLimit = ref(200)
   const activeFilters = reactive({
     tier: new Set(),
     size: new Set(),

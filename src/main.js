@@ -10,9 +10,9 @@ app.use(createPinia())
 app.use(router)
 app.mount('#app')
 
-// Service Worker
+// Unregister any existing service workers (cleanup from previous versions)
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(() => {})
+  navigator.serviceWorker.getRegistrations().then(regs => {
+    regs.forEach(r => r.unregister())
   })
 }

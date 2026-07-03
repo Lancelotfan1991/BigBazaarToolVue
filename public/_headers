@@ -1,0 +1,18 @@
+# HTML pages - no cache
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Root HTML
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Service Worker - no cache
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Data files - cache for 1 day
+/data/*
+  Cache-Control: public, max-age=86400
+
+/data-s15/*
+  Cache-Control: public, max-age=86400

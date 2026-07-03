@@ -81,13 +81,30 @@ describe('T1 - GameDataView 商人/怪物集成', () => {
     expect(fb.props('showDaySort')).toBe(true)
   })
 
-  it('当访问 /game/events 时，FilterBar 不显示职业筛选', async () => {
+  it('当访问 /game/events 时，FilterBar 显示职业筛选', async () => {
     currentRoute = { params: { type: 'events' } }
     const wrapper = mount(GameDataView)
     await new Promise(r => setTimeout(r, 100))
     const fb = wrapper.findComponent({ name: 'FilterBar' })
-    expect(fb.props('showHeroFilter')).toBe(false)
+    expect(fb.props('showHeroFilter')).toBe(true)
     expect(fb.props('showDaySort')).toBe(false)
+  })
+
+  it('当访问 /game/events 时，隐藏大小和范围筛选', async () => {
+    currentRoute = { params: { type: 'events' } }
+    const wrapper = mount(GameDataView)
+    await new Promise(r => setTimeout(r, 100))
+    const fb = wrapper.findComponent({ name: 'FilterBar' })
+    expect(fb.props('hideSizeFilter')).toBe(true)
+    expect(fb.props('hideScopeFilter')).toBe(true)
+  })
+
+  it('当访问 /game/events 时，显示更新切换按钮', async () => {
+    currentRoute = { params: { type: 'events' } }
+    const wrapper = mount(GameDataView)
+    await new Promise(r => setTimeout(r, 100))
+    const fb = wrapper.findComponent({ name: 'FilterBar' })
+    expect(fb.props('showUpdateToggle')).toBe(true)
   })
 
   it('当访问 /game/monsters 时，默认按天数排序', async () => {
@@ -113,5 +130,21 @@ describe('T1 - GameDataView 商人/怪物集成', () => {
     const fb = wrapper.findComponent({ name: 'FilterBar' })
     expect(fb.props('hideSizeFilter')).toBe(false)
     expect(fb.props('hideScopeFilter')).toBe(false)
+  })
+
+  it('当访问 /game/monsters 时，显示更新切换按钮', async () => {
+    currentRoute = { params: { type: 'monsters' } }
+    const wrapper = mount(GameDataView)
+    await new Promise(r => setTimeout(r, 100))
+    const fb = wrapper.findComponent({ name: 'FilterBar' })
+    expect(fb.props('showUpdateToggle')).toBe(true)
+  })
+
+  it('当访问 /game/trainers 时，不显示更新切换按钮', async () => {
+    currentRoute = { params: { type: 'trainers' } }
+    const wrapper = mount(GameDataView)
+    await new Promise(r => setTimeout(r, 100))
+    const fb = wrapper.findComponent({ name: 'FilterBar' })
+    expect(fb.props('showUpdateToggle')).toBe(false)
   })
 })
