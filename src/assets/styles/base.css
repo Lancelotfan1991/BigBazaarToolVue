@@ -1829,3 +1829,49 @@
   font-size: 13px;
   color: var(--text2);
 }
+
+/* Monster skills - circular layout */
+.mon-skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 4px 0;
+}
+.mon-skill-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.15s;
+  width: 40px;
+}
+.mon-skill-slot:hover {
+  transform: scale(1.1);
+}
+.mon-skill-slot .skill-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background-color: var(--surface2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.mon-skill-slot.tier-Bronze .skill-img { border-color: #a0785a; }
+.mon-skill-slot.tier-Silver .skill-img { border-color: #b0b8c8; }
+.mon-skill-slot.tier-Gold .skill-img { border-color: #d4a844; }
+.mon-skill-slot.tier-Diamond .skill-img { border-color: #6ec6e6; }
+.mon-skill-slot.tier-Legendary .skill-img { border-color: #c850f0; }
+.mon-skill-slot .skill-name-label {
+  font-size: 9px;
+  color: var(--text2);
+  text-align: center;
+  margin-top: 2px;
+  line-height: 1.1;
+  max-width: 44px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

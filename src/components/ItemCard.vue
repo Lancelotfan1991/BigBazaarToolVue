@@ -221,23 +221,21 @@
       </div>
       <div
         v-if="monSkills.length"
-        class="mon-board"
+        class="mon-skills-row"
       >
-        <div class="mon-board-row">
+        <div
+          v-for="(sk, i) in monSkills"
+          :key="'skill-' + i"
+          class="mon-skill-slot"
+          :class="'tier-' + (sk.tier || 'Bronze')"
+          @click.stop="searchItem(sk.name)"
+        >
           <div
-            v-for="(sk, i) in monSkills"
-            :key="'skill-' + i"
-            class="mon-board-slot size-S"
-            :class="'tier-' + (sk.tier || 'Bronze')"
-            @click.stop="searchItem(sk.name)"
-          >
-            <div
-              class="slot-img-wrap"
-              :style="sk.img ? { backgroundImage: 'url(' + sk.img + ')' } : {}"
-            />
-            <div class="slot-name">
-              {{ sk.name }}
-            </div>
+            class="skill-img"
+            :style="sk.img ? { backgroundImage: 'url(' + sk.img + ')' } : {}"
+          />
+          <div class="skill-name-label">
+            {{ sk.name }}
           </div>
         </div>
       </div>
