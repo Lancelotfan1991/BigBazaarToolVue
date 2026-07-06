@@ -229,7 +229,7 @@
             :key="'skill-' + i"
             class="mon-board-slot size-S"
             :class="'tier-' + (sk.tier || 'Bronze')"
-            @click.stop="openSkill(sk.link)"
+            @click.stop="searchItem(sk.name)"
           >
             <div
               class="slot-img-wrap"
@@ -475,11 +475,6 @@ function searchItem(itemName) {
   if (itemName) filterStore.searchQuery = itemName
 }
 
-function openSkill(link) {
-  if (link) {
-    window.open(link.startsWith('http') ? link : 'https://bazaardb.gg' + link, '_blank')
-  }
-}
 
 function fallback(e) {
   e.target.outerHTML = '<div class="card-icon-fallback">' + fallbackChar.value + '</div>'

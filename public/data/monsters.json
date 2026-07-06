@@ -1,7 +1,7 @@
 {
   "职业": "怪物",
   "英文名": "monsters",
-  "获取时间": "2026-07-06 14:19:09",
+  "获取时间": "2026-07-06 14:55:48",
   "物品数量": 144,
   "技能数量": 0,
   "物品": [
@@ -67,7 +67,8 @@
         ],
         "技能": [
           {
-            "名称": "Crash Out",
+            "名称": "暴走崩溃",
+            "英文名": "Crash Out",
             "图片": "https://s.bazaardb.gg/v1/z16.0/626e60a2db614825869808b1cbee600d43f2315b@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/x6d4pjqfpssj19vyx8bbd6zbx4/Crash-Out",
@@ -138,7 +139,8 @@
         ],
         "技能": [
           {
-            "名称": "Teachable Moment",
+            "名称": "教学时刻",
+            "英文名": "Teachable Moment",
             "图片": "https://s.bazaardb.gg/v1/z16.0/1eecd51bf066529c67d77b5245a95c8a865b9f9a@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/13b6nj3w8sllvgz8gm98q69twsc/Teachable-Moment",
@@ -215,7 +217,8 @@
         ],
         "技能": [
           {
-            "名称": "Bombing Run",
+            "名称": "轰炸行动",
+            "英文名": "Bombing Run",
             "图片": "https://s.bazaardb.gg/v1/z16.0/d013c6ad2d2a3c74a360c09b79cbc9f1d905cd11@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/q52skd3bc84c9tqf6cdjskqh4k/Bombing-Run",
@@ -292,14 +295,16 @@
         ],
         "技能": [
           {
-            "名称": "Aerial Assault",
+            "名称": "空中突袭",
+            "英文名": "Aerial Assault",
             "图片": "https://s.bazaardb.gg/v1/z16.0/3dc81c7a804c4e7212712d0dbb82bc608177f654@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/sp86f288j7px1p3sbjvy1pdhvp/Aerial-Assault",
             "类型": "Skill"
           },
           {
-            "名称": "Strength",
+            "名称": "力量",
+            "英文名": "Strength",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63ecb0d003abf600af5b166d58a3b6c347c860af@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/19gtzndjjyb09p434w6vzwxvcbd/Strength",
@@ -376,7 +381,8 @@
         ],
         "技能": [
           {
-            "名称": "Fairy Haze",
+            "名称": "仙尘迷雾",
+            "英文名": "Fairy Haze",
             "图片": "https://s.bazaardb.gg/v1/z16.0/57135eb0b23db82f72e8bfff2dddce8a9b2d377e@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/s4dt1nkg491ljmc68y9dcx7jh8/Fairy-Haze",
@@ -447,7 +453,8 @@
         ],
         "技能": [
           {
-            "名称": "Trained",
+            "名称": "受训",
+            "英文名": "Trained",
             "图片": "https://s.bazaardb.gg/v1/z16.0/d4b044e45a8a5a5ab3cc14e3eed9e2ebe967f292@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/t6xxfztpwl843cb9qwl90bk91/Trained",
@@ -518,7 +525,8 @@
         ],
         "技能": [
           {
-            "名称": "Panic",
+            "名称": "恐慌",
+            "英文名": "Panic",
             "图片": "https://s.bazaardb.gg/v1/z16.0/56af123017b3284dc8d9c4bc25669fd68252c5e5@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/17f5x4jxjc1557ycz09d4qnkk3d/Panic",
@@ -619,7 +627,8 @@
         ],
         "技能": [
           {
-            "名称": "Diamond Fangs",
+            "名称": "钻石獠牙",
+            "英文名": "Diamond Fangs",
             "图片": "https://s.bazaardb.gg/v1/z16.0/df3e5a794756107df670354e3a551cc389c065ed@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/54m6zg4qhkllgcttl9wpk47k46/Diamond-Fangs",
@@ -702,7 +711,8 @@
         ],
         "技能": [
           {
-            "名称": "Toxic Friendship",
+            "名称": "恶毒友谊",
+            "英文名": "Toxic Friendship",
             "图片": "https://s.bazaardb.gg/v1/z16.0/7981fd1fc8c10ba0dba42229a19f6aadc2225aad@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/fmmh1hvf1y3hctpsvgdqmxfzbb/Toxic-Friendship",
@@ -791,14 +801,16 @@
         ],
         "技能": [
           {
-            "名称": "Precision Tools",
+            "名称": "精密工具",
+            "英文名": "Precision Tools",
             "图片": "https://s.bazaardb.gg/v1/z16.0/0ab5cff97108b16a285a9679a50cb5c2a0c959ca@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/ylwzv0s47ldssg4xb7dtp6l7bt/Precision-Tools",
             "类型": "Skill"
           },
           {
-            "名称": "Time to Tinker",
+            "名称": "修理时间",
+            "英文名": "Time to Tinker",
             "图片": "https://s.bazaardb.gg/v1/z16.0/78855f2934caa57473e4b616270e7dff79de1390@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/ys6ly8t666sy9t6yv12jvln1x0/Time-to-Tinker",
@@ -1139,7 +1151,8 @@
         ],
         "技能": [
           {
-            "名称": "Jury Rigger",
+            "名称": "临修工匠",
+            "英文名": "Jury Rigger",
             "图片": "https://s.bazaardb.gg/v1/z16.0/af5c6514f738c92b921fee77e127ce6aec00b58c@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/jwlf8t81b4zzxpn9f7gz0x461/Jury-Rigger",
@@ -1228,14 +1241,16 @@
         ],
         "技能": [
           {
-            "名称": "Cosmic Wind",
+            "名称": "宇宙风",
+            "英文名": "Cosmic Wind",
             "图片": "https://s.bazaardb.gg/v1/z16.0/b9d3518376ee75f64ed035718f8bcda2090e041b@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/p5m3yvjmt5wzqjnlyg22tvh176/Cosmic-Wind",
             "类型": "Skill"
           },
           {
-            "名称": "Keen Eye",
+            "名称": "敏锐眼光",
+            "英文名": "Keen Eye",
             "图片": "https://s.bazaardb.gg/v1/z16.0/763c55da9644b8f0f19911e8559eb5c65a7180a2@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/yb1m0ydcn97y8jmcw56k4736fn/Keen-Eye",
@@ -1324,14 +1339,16 @@
         ],
         "技能": [
           {
-            "名称": "Adaptive Ordinance",
+            "名称": "自适应军备",
+            "英文名": "Adaptive Ordinance",
             "图片": "https://s.bazaardb.gg/v1/z16.0/2abf15733ebb65f77261fedf62dccfccfd5e7a58@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/f3qwnfm4fbq6vwbh80511j9yj1/Adaptive-Ordinance",
             "类型": "Skill"
           },
           {
-            "名称": "Parting Shot",
+            "名称": "诀别一击",
+            "英文名": "Parting Shot",
             "图片": "https://s.bazaardb.gg/v1/z16.0/f6b3378603d21f336f68d924dad809a8e605b5ae@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/wf40vz825kwnsg3qwygjfy2v02/Parting-Shot",
@@ -1414,14 +1431,16 @@
         ],
         "技能": [
           {
-            "名称": "Equivalent Exchange",
+            "名称": "等价交换",
+            "英文名": "Equivalent Exchange",
             "图片": "https://s.bazaardb.gg/v1/z16.0/7ff3473f480a2e16aca65450236c4aa18a75600a@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/14s03jmbl9nd2nn7b81vq95v744/Equivalent-Exchange",
             "类型": "Skill"
           },
           {
-            "名称": "Critical Aid",
+            "名称": "暴击支援",
+            "英文名": "Critical Aid",
             "图片": "https://s.bazaardb.gg/v1/z16.0/404d55ea3a13c76f3cfca83d2aa9a9531fe3d3df@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/2vg3g3z0p7t8m1gq1lg3qvdw17/Critical-Aid",
@@ -1522,7 +1541,8 @@
         ],
         "技能": [
           {
-            "名称": "Strength",
+            "名称": "力量",
+            "英文名": "Strength",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63ecb0d003abf600af5b166d58a3b6c347c860af@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/19gtzndjjyb09p434w6vzwxvcbd/Strength",
@@ -1599,7 +1619,8 @@
         ],
         "技能": [
           {
-            "名称": "Rust",
+            "名称": "铁锈",
+            "英文名": "Rust",
             "图片": "https://s.bazaardb.gg/v1/z16.0/48d5fec4f1d80c56b9fba5f57eec10d9282b206d@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/wpvqkjhkswjk972zf4nm22hzyk/Rust",
@@ -1670,7 +1691,8 @@
         ],
         "技能": [
           {
-            "名称": "Hard Shell",
+            "名称": "硬壳",
+            "英文名": "Hard Shell",
             "图片": "https://s.bazaardb.gg/v1/z16.0/e8e8dcf98d763b9a9c9601c4dc568e2a1fffbfb8@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/stqngwqspzb9nb7gjgnb412wg/Hard-Shell",
@@ -1771,7 +1793,8 @@
         ],
         "技能": [
           {
-            "名称": "Poison Tyrant",
+            "名称": "剧毒暴君",
+            "英文名": "Poison Tyrant",
             "图片": "https://s.bazaardb.gg/v1/z16.0/aa301ee91488538c18265088d474589260e7b35b@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/yywx9w8zxqc1g1s45yhwtp7w9s/Poison-Tyrant",
@@ -1836,7 +1859,8 @@
         ],
         "技能": [
           {
-            "名称": "Fiery",
+            "名称": "炽焰",
+            "英文名": "Fiery",
             "图片": "https://s.bazaardb.gg/v1/z16.0/e035a48f6bcd9d7076996251dad9989942981fa3@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/yn7vwphhqy8k99dw77zsfznbf6/Fiery",
@@ -1913,7 +1937,8 @@
         ],
         "技能": [
           {
-            "名称": "Retool",
+            "名称": "上膛工具",
+            "英文名": "Retool",
             "图片": "https://s.bazaardb.gg/v1/z16.0/acde8142986e42de5a6c5dde2775262c40e9c9ef@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/19dgvfdnghjqkpxtymwbhcps47p/Retool",
@@ -1990,7 +2015,8 @@
         ],
         "技能": [
           {
-            "名称": "Flamedancer",
+            "名称": "烈焰舞者",
+            "英文名": "Flamedancer",
             "图片": "https://s.bazaardb.gg/v1/z16.0/a2bb1e51c67993bbd17b199e95515ea3d0c8c48c@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/410x3l1ztfh99m0t76kgcpkhb0/Flamedancer",
@@ -2067,7 +2093,8 @@
         ],
         "技能": [
           {
-            "名称": "Lone Charge",
+            "名称": "孤独冲锋",
+            "英文名": "Lone Charge",
             "图片": "https://s.bazaardb.gg/v1/z16.0/aeab9d80ae8bc22f2ea8d8529d8b98678bea14f0@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/dws4vt452b8wtzdlk0x7czntnv/Lone-Charge",
@@ -2132,7 +2159,8 @@
         ],
         "技能": [
           {
-            "名称": "Deadly Eye",
+            "名称": "致命眼光",
+            "英文名": "Deadly Eye",
             "图片": "https://s.bazaardb.gg/v1/z16.0/65e12d9fa9b0aec8cf0870d55b12d6e6958a74db@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/87xgm2b03kdn2ngjj58l22v8c5/Deadly-Eye",
@@ -2221,7 +2249,8 @@
         ],
         "技能": [
           {
-            "名称": "Siphoned Shield",
+            "名称": "虹吸护盾",
+            "英文名": "Siphoned Shield",
             "图片": "https://s.bazaardb.gg/v1/z16.0/7adc00876b05414689ff056a4a6ca9491c4de533@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/nc03fv64hsy7n906dv0f3m4yx5/Siphoned-Shield",
@@ -2298,7 +2327,8 @@
         ],
         "技能": [
           {
-            "名称": "Give it a Whack",
+            "名称": "敲打一下",
+            "英文名": "Give it a Whack",
             "图片": "https://s.bazaardb.gg/v1/z16.0/671328b441a1e5d14f24b4b5ed4d66494a46c803@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/7wxplbttfcg2jdy54gvflsnxvx/Give-it-a-Whack",
@@ -2381,7 +2411,8 @@
         ],
         "技能": [
           {
-            "名称": "All Talk",
+            "名称": "光说不练",
+            "英文名": "All Talk",
             "图片": "https://s.bazaardb.gg/v1/z16.0/820e83319d3d67c248e446b2c6e48c01870d3c9c@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/hqqbzxnmgzg80v2dt5n7yw76b4/All-Talk",
@@ -2476,14 +2507,16 @@
         ],
         "技能": [
           {
-            "名称": "Big Ego",
+            "名称": "虚荣",
+            "英文名": "Big Ego",
             "图片": "https://s.bazaardb.gg/v1/z16.0/ed3e081e3f78401ded214f725703ef3f16baa9aa@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/hsfwkp7gbx47f351g7sb6vqdl/Big-Ego",
             "类型": "Skill"
           },
           {
-            "名称": "Strength",
+            "名称": "力量",
+            "英文名": "Strength",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63ecb0d003abf600af5b166d58a3b6c347c860af@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/19gtzndjjyb09p434w6vzwxvcbd/Strength",
@@ -2566,7 +2599,8 @@
         ],
         "技能": [
           {
-            "名称": "Anything to Win",
+            "名称": "不择手段",
+            "英文名": "Anything to Win",
             "图片": "https://s.bazaardb.gg/v1/z16.0/2b694daac604362afb75d7462639f1c37bf581fe@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/10f174lyjwh90sn8t39wbhfdwdz/Anything-to-Win",
@@ -2655,7 +2689,8 @@
         ],
         "技能": [
           {
-            "名称": "Aggressive",
+            "名称": "好战",
+            "英文名": "Aggressive",
             "图片": "https://s.bazaardb.gg/v1/z16.0/c7eae4a1189554a2e29a9519b1a6d68b85909929@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/lddh9tpmjgtmp6cvs62j1mjnjk/Aggressive",
@@ -2732,7 +2767,8 @@
         ],
         "技能": [
           {
-            "名称": "Keen Eye",
+            "名称": "敏锐眼光",
+            "英文名": "Keen Eye",
             "图片": "https://s.bazaardb.gg/v1/z16.0/763c55da9644b8f0f19911e8559eb5c65a7180a2@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/yb1m0ydcn97y8jmcw56k4736fn/Keen-Eye",
@@ -2797,7 +2833,8 @@
         ],
         "技能": [
           {
-            "名称": "Healthy Jolt",
+            "名称": "活力冲击",
+            "英文名": "Healthy Jolt",
             "图片": "https://s.bazaardb.gg/v1/z16.0/11d1037e143a723a60f444a37724bd5ef9ef148d@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/kx3bzzv652bz61ygt9zkkyxp7t/Healthy-Jolt",
@@ -2868,14 +2905,16 @@
         ],
         "技能": [
           {
-            "名称": "Full Arsenal",
+            "名称": "全副武装",
+            "英文名": "Full Arsenal",
             "图片": "https://s.bazaardb.gg/v1/z16.0/886ba9a059a4d77873111c0ac645e9a9053783e8@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/8tx8czdj89n5695mntgnzsfjpl/Full-Arsenal",
             "类型": "Skill"
           },
           {
-            "名称": "Heavy Firepower",
+            "名称": "重火力",
+            "英文名": "Heavy Firepower",
             "图片": "https://s.bazaardb.gg/v1/z16.0/9da31735bfb377bdad154ac9790616daf6d1eb91@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/163f51bsvxbt7db1w7xk08tvqs6/Heavy-Firepower",
@@ -2958,14 +2997,16 @@
         ],
         "技能": [
           {
-            "名称": "Time to Tinker",
+            "名称": "修理时间",
+            "英文名": "Time to Tinker",
             "图片": "https://s.bazaardb.gg/v1/z16.0/78855f2934caa57473e4b616270e7dff79de1390@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/ys6ly8t666sy9t6yv12jvln1x0/Time-to-Tinker",
             "类型": "Skill"
           },
           {
-            "名称": "Flashy Mechanic",
+            "名称": "炫技机械师",
+            "英文名": "Flashy Mechanic",
             "图片": "https://s.bazaardb.gg/v1/z16.0/6afd076fa8d2f5d7fab01c42e10dce19f43846fa@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/b1hystdbv1qy5yhtzjkls06wtk/Flashy-Mechanic",
@@ -3036,14 +3077,16 @@
         ],
         "技能": [
           {
-            "名称": "Frontal Shielding",
+            "名称": "前向护盾",
+            "英文名": "Frontal Shielding",
             "图片": "https://s.bazaardb.gg/v1/z16.0/809d3209b20e86d8429d9fbff34e05eca6ff1fc9@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/ytnq2l255kcw0sl7p1szt5dwvq/Frontal-Shielding",
             "类型": "Skill"
           },
           {
-            "名称": "It's All Connected",
+            "名称": "万物互联",
+            "英文名": "It's All Connected",
             "图片": "https://s.bazaardb.gg/v1/z16.0/84aada44d44d4414fca247b8f5114ac7e208ce1a@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/6n87z8zfpxwwzcw8t23d55yqpl/It's-All-Connected",
@@ -3120,7 +3163,8 @@
         ],
         "技能": [
           {
-            "名称": "Regenerative",
+            "名称": "元气恢复",
+            "英文名": "Regenerative",
             "图片": "https://s.bazaardb.gg/v1/z16.0/62aef87abef2e185b2b53fc9543f385d5948b442@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/vbhd4bg4n4vk8d5g2vzy7ltskv/Regenerative",
@@ -3209,7 +3253,8 @@
         ],
         "技能": [
           {
-            "名称": "Product Showcase",
+            "名称": "产品展示台",
+            "英文名": "Product Showcase",
             "图片": "https://s.bazaardb.gg/v1/z16.0/70c85f614b9aea4ef8045d5a96e5c2b63ed95acc@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/bln5s9mql4qg0xxm4cpb5bkqpt/Product-Showcase",
@@ -3286,7 +3331,8 @@
         ],
         "技能": [
           {
-            "名称": "Counterstrike",
+            "名称": "反击",
+            "英文名": "Counterstrike",
             "图片": "https://s.bazaardb.gg/v1/z16.0/9ac42e04abbcc51448a5dde757fcefb3604b6ba3@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/110npyvg1gw2tldcy6xmskmpg7s/Counterstrike",
@@ -3363,21 +3409,24 @@
         ],
         "技能": [
           {
-            "名称": "Flashy Reload",
+            "名称": "炫技装弹",
+            "英文名": "Flashy Reload",
             "图片": "https://s.bazaardb.gg/v1/z16.0/2f1467ecb6d87f7dcea7ad8ce1ac47c7bad72ca9@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/1b14s6ddtd5jkh65w5tcsm2y23m/Flashy-Reload",
             "类型": "Skill"
           },
           {
-            "名称": "Keen Eye",
+            "名称": "敏锐眼光",
+            "英文名": "Keen Eye",
             "图片": "https://s.bazaardb.gg/v1/z16.0/763c55da9644b8f0f19911e8559eb5c65a7180a2@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/yb1m0ydcn97y8jmcw56k4736fn/Keen-Eye",
             "类型": "Skill"
           },
           {
-            "名称": "Gunner",
+            "名称": "炮手",
+            "英文名": "Gunner",
             "图片": "https://s.bazaardb.gg/v1/z16.0/947a30b37c152977b734c5c296bc212f9ef586c1@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/7qb43pgkp2vydptg1pttg2td54/Gunner",
@@ -3448,7 +3497,8 @@
         ],
         "技能": [
           {
-            "名称": "Vengeance",
+            "名称": "复仇",
+            "英文名": "Vengeance",
             "图片": "https://s.bazaardb.gg/v1/z16.0/1b9133723fa24595c4bebd90caadd6ac2f53d448@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/tq2dfpb81nkddpy889g3q2s0qm/Vengeance",
@@ -3519,7 +3569,8 @@
         ],
         "技能": [
           {
-            "名称": "Pyromania",
+            "名称": "纵火狂",
+            "英文名": "Pyromania",
             "图片": "https://s.bazaardb.gg/v1/z16.0/b2972ef3685998db62565d4fe19f91f010ae215c@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/gpvb10dszg8ydgd0fw1xwqjq9j/Pyromania",
@@ -3602,7 +3653,8 @@
         ],
         "技能": [
           {
-            "名称": "Firestarter",
+            "名称": "引火者",
+            "英文名": "Firestarter",
             "图片": "https://s.bazaardb.gg/v1/z16.0/6ce1cc3ff2ed3551df813d3342f27d29c0b5b884@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/1b3y00d9vgkjm3jxv7w27pndhtj/Firestarter",
@@ -3691,7 +3743,8 @@
         ],
         "技能": [
           {
-            "名称": "Juggler",
+            "名称": "杂耍",
+            "英文名": "Juggler",
             "图片": "https://s.bazaardb.gg/v1/z16.0/07ab9c82e619b43d402453cf9e6c9b7811674022@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/12p0sm8pzhwqdlhjd4456yszw33/Juggler",
@@ -3780,7 +3833,8 @@
         ],
         "技能": [
           {
-            "名称": "Exposing Toxins",
+            "名称": "弱点毒素",
+            "英文名": "Exposing Toxins",
             "图片": "https://s.bazaardb.gg/v1/z16.0/b73a1382546e0bb232e0684bf1f07e41538da852@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/1cncsswpqjlbpczn90f2g5psj5/Exposing-Toxins",
@@ -3857,14 +3911,16 @@
         ],
         "技能": [
           {
-            "名称": "Toxic Fuel",
+            "名称": "毒性燃料",
+            "英文名": "Toxic Fuel",
             "图片": "https://s.bazaardb.gg/v1/z16.0/edd509790bcf4570714aa37ffd9a0545a7612585@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/fgy49d2p69mlh7ylbq5lndd69g/Toxic-Fuel",
             "类型": "Skill"
           },
           {
-            "名称": "Vital Reserve",
+            "名称": "生命储备",
+            "英文名": "Vital Reserve",
             "图片": "https://s.bazaardb.gg/v1/z16.0/37e3a295f4a62251c7da7d12913172dae1eb9645@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/ym885qx4j3198gpkfxj38x80c3/Vital-Reserve",
@@ -3935,7 +3991,8 @@
         ],
         "技能": [
           {
-            "名称": "Honed In",
+            "名称": "磨砺精进",
+            "英文名": "Honed In",
             "图片": "https://s.bazaardb.gg/v1/z16.0/6dacf7a2ec9d615d67efa77f3ae1f41c3aa5cb1a@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/2yytfcp58cxjxcd3fkyk4jjcyk/Honed-In",
@@ -4018,14 +4075,16 @@
         ],
         "技能": [
           {
-            "名称": "Friendzone",
+            "名称": "伙伴卡",
+            "英文名": "Friendzone",
             "图片": "https://s.bazaardb.gg/v1/z16.0/7ad7271d012890e303f03ac739990c37f8c494cb@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/169k03vytfsxm37f820w4z7wblz/Friendzone",
             "类型": "Skill"
           },
           {
-            "名称": "Warm Hugs",
+            "名称": "温暖拥抱",
+            "英文名": "Warm Hugs",
             "图片": "https://s.bazaardb.gg/v1/z16.0/789479d25365e434c66a0bb5d48d592067e36e18@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/4md3cx722msyzsxx3929pzjgnn/Warm-Hugs",
@@ -4120,14 +4179,16 @@
         ],
         "技能": [
           {
-            "名称": "Heat Lover",
+            "名称": "热辣爱好者",
+            "英文名": "Heat Lover",
             "图片": "https://s.bazaardb.gg/v1/z16.0/25fb420ff3e6660e39bedf0fa4be892966b0bf85@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/n5nnv6h8gmkccx1k76wkyxzmxt/Heat-Lover",
             "类型": "Skill"
           },
           {
-            "名称": "Fiery",
+            "名称": "炽焰",
+            "英文名": "Fiery",
             "图片": "https://s.bazaardb.gg/v1/z16.0/e035a48f6bcd9d7076996251dad9989942981fa3@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/yn7vwphhqy8k99dw77zsfznbf6/Fiery",
@@ -4210,7 +4271,8 @@
         ],
         "技能": [
           {
-            "名称": "Foreboding Winds",
+            "名称": "凶风",
+            "英文名": "Foreboding Winds",
             "图片": "https://s.bazaardb.gg/v1/z16.0/34661a4066913586bd7e29259410a0947526a411@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/11mn6km871vqj203lxkxjk4z521/Foreboding-Winds",
@@ -4287,7 +4349,8 @@
         ],
         "技能": [
           {
-            "名称": "Slippery Fella",
+            "名称": "滑溜家伙",
+            "英文名": "Slippery Fella",
             "图片": "https://s.bazaardb.gg/v1/z16.0/b6b625ab04040b93ff290c551bf20ba907e0de0e@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/xmy5bdh3v6ps0w0k942j6lc386/Slippery-Fella",
@@ -4370,14 +4433,16 @@
         ],
         "技能": [
           {
-            "名称": "Equivalent Exchange",
+            "名称": "等价交换",
+            "英文名": "Equivalent Exchange",
             "图片": "https://s.bazaardb.gg/v1/z16.0/7ff3473f480a2e16aca65450236c4aa18a75600a@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/14s03jmbl9nd2nn7b81vq95v744/Equivalent-Exchange",
             "类型": "Skill"
           },
           {
-            "名称": "Critical Aid",
+            "名称": "暴击支援",
+            "英文名": "Critical Aid",
             "图片": "https://s.bazaardb.gg/v1/z16.0/404d55ea3a13c76f3cfca83d2aa9a9531fe3d3df@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/2vg3g3z0p7t8m1gq1lg3qvdw17/Critical-Aid",
@@ -4454,7 +4519,8 @@
         ],
         "技能": [
           {
-            "名称": "Happy Camper",
+            "名称": "快乐露营者",
+            "英文名": "Happy Camper",
             "图片": "https://s.bazaardb.gg/v1/z16.0/2885951a51b1b4e1c98d01445ccb96422ba4d7fe@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/19m2jj23c6w6f9nwvf0wlyqf2l/Happy-Camper",
@@ -4513,7 +4579,8 @@
         ],
         "技能": [
           {
-            "名称": "Haunting Flight",
+            "名称": "鬼魅飘飞",
+            "英文名": "Haunting Flight",
             "图片": "https://s.bazaardb.gg/v1/z16.0/7026213bead15a43eee32ddb5deb18a0de2b11f8@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/b7nsk92pbplxhf5yxjndh0qxbc/Haunting-Flight",
@@ -4596,14 +4663,16 @@
         ],
         "技能": [
           {
-            "名称": "Passive Power",
+            "名称": "被动能量",
+            "英文名": "Passive Power",
             "图片": "https://s.bazaardb.gg/v1/z16.0/82eaf611d56d45263c96f50a508535b614de4200@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/5g8sn41qqkg7bl8hq0yhb4xslm/Passive-Power",
             "类型": "Skill"
           },
           {
-            "名称": "Flashy Reload",
+            "名称": "炫技装弹",
+            "英文名": "Flashy Reload",
             "图片": "https://s.bazaardb.gg/v1/z16.0/2f1467ecb6d87f7dcea7ad8ce1ac47c7bad72ca9@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/1b14s6ddtd5jkh65w5tcsm2y23m/Flashy-Reload",
@@ -4704,7 +4773,8 @@
         ],
         "技能": [
           {
-            "名称": "Strength",
+            "名称": "力量",
+            "英文名": "Strength",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63ecb0d003abf600af5b166d58a3b6c347c860af@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/19gtzndjjyb09p434w6vzwxvcbd/Strength",
@@ -4781,14 +4851,16 @@
         ],
         "技能": [
           {
-            "名称": "Strength",
+            "名称": "力量",
+            "英文名": "Strength",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63ecb0d003abf600af5b166d58a3b6c347c860af@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/19gtzndjjyb09p434w6vzwxvcbd/Strength",
             "类型": "Skill"
           },
           {
-            "名称": "Retro-Tech",
+            "名称": "复古科技",
+            "英文名": "Retro-Tech",
             "图片": "https://s.bazaardb.gg/v1/z16.0/3cb1c0164153bd7f4bb77d7ccd8fa3d42b1ce83b@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/qsc9zmjjj2ftw357bvg5fcmsq9/Retro-Tech",
@@ -4853,7 +4925,8 @@
         ],
         "技能": [
           {
-            "名称": "Lash Out",
+            "名称": "狂怒一击",
+            "英文名": "Lash Out",
             "图片": "https://s.bazaardb.gg/v1/z16.0/eba2ca5790fc5ef2c618db6d61fa2846dc69df77@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/5kk50x0nljlg68k01q8f2mmg7w/Lash-Out",
@@ -4942,21 +5015,24 @@
         ],
         "技能": [
           {
-            "名称": "Shored Up",
+            "名称": "防线强化",
+            "英文名": "Shored Up",
             "图片": "https://s.bazaardb.gg/v1/z16.0/16b7492b83e4700ed35a06edcccbc506bbd1cd80@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/mbvdtq6z8npjfzs3pyhlszp8jb/Shored-Up",
             "类型": "Skill"
           },
           {
-            "名称": "First Responder",
+            "名称": "急救包",
+            "英文名": "First Responder",
             "图片": "https://s.bazaardb.gg/v1/z16.0/f1748994ea07540d85aaeacdff57e25b93cafcab@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/d7yf32xz6jzzkg3fkhhdtctv79/First-Responder",
             "类型": "Skill"
           },
           {
-            "名称": "Follow-Up Care",
+            "名称": "跟进疗护",
+            "英文名": "Follow-Up Care",
             "图片": "https://s.bazaardb.gg/v1/z16.0/673945bc5e4d03c056d7fc9dfab45e67663ee815@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/110yh7fh6p3g56zkpm0q0kvdsqg/Follow-Up-Care",
@@ -5045,7 +5121,8 @@
         ],
         "技能": [
           {
-            "名称": "Ferocious Bite",
+            "名称": "凶猛撕咬",
+            "英文名": "Ferocious Bite",
             "图片": "https://s.bazaardb.gg/v1/z16.0/105321bf0e475f72edc18fe98f2a3bcdbe2db596@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/d8skyyb7vc8yxn4vmvftv55t5w/Ferocious-Bite",
@@ -5128,7 +5205,8 @@
         ],
         "技能": [
           {
-            "名称": "Guardian's Fury",
+            "名称": "守护神之怒",
+            "英文名": "Guardian's Fury",
             "图片": "https://s.bazaardb.gg/v1/z16.0/c534686183c57ee7925c22a2c64f7e62e8aef02e@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/h1ggd3zb920h153s2wdwgcjkbp/Guardian's-Fury",
@@ -5211,14 +5289,16 @@
         ],
         "技能": [
           {
-            "名称": "Just Looking",
+            "名称": "只是看看",
+            "英文名": "Just Looking",
             "图片": "https://s.bazaardb.gg/v1/z16.0/96202a1bb815686ff89577f3078f780bdd484b0e@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/d0bxck6pcfyf7szkk2k3v11hw7/Just-Looking",
             "类型": "Skill"
           },
           {
-            "名称": "Flashy Reload",
+            "名称": "炫技装弹",
+            "英文名": "Flashy Reload",
             "图片": "https://s.bazaardb.gg/v1/z16.0/2f1467ecb6d87f7dcea7ad8ce1ac47c7bad72ca9@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/1b14s6ddtd5jkh65w5tcsm2y23m/Flashy-Reload",
@@ -5295,7 +5375,8 @@
         ],
         "技能": [
           {
-            "名称": "Waters of Infinity",
+            "名称": "无尽水源",
+            "英文名": "Waters of Infinity",
             "图片": "https://s.bazaardb.gg/v1/z16.0/d959a5c17a9ce719b42dfbfb26b59612b0709cba@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/vzdlf0d9stt4b7wd2zq5038mmw/Waters-of-Infinity",
@@ -5378,7 +5459,8 @@
         ],
         "技能": [
           {
-            "名称": "Frontal Shielding",
+            "名称": "前向护盾",
+            "英文名": "Frontal Shielding",
             "图片": "https://s.bazaardb.gg/v1/z16.0/809d3209b20e86d8429d9fbff34e05eca6ff1fc9@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/ytnq2l255kcw0sl7p1szt5dwvq/Frontal-Shielding",
@@ -5455,7 +5537,8 @@
         ],
         "技能": [
           {
-            "名称": "Ammo Stash",
+            "名称": "弹药储存箱",
+            "英文名": "Ammo Stash",
             "图片": "https://s.bazaardb.gg/v1/z16.0/2a04bc3e7650c8fed95f8d715bf74cf63d5c5d79@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/f0dffg7vjfqjj7kl42wv5k2zpl/Ammo-Stash",
@@ -5532,7 +5615,8 @@
         ],
         "技能": [
           {
-            "名称": "Small Refresh",
+            "名称": "精神微振",
+            "英文名": "Small Refresh",
             "图片": "https://s.bazaardb.gg/v1/z16.0/ff42d8c6e3d7c197cde151e1f3186ec98bde7f8c@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/pvnhlg8fzvlj6vg5tq7nkl3n3w/Small-Refresh",
@@ -5603,14 +5687,16 @@
         ],
         "技能": [
           {
-            "名称": "Pickpocket",
+            "名称": "扒手",
+            "英文名": "Pickpocket",
             "图片": "https://s.bazaardb.gg/v1/z16.0/900c0155215e3de0f16942cc9cec5bbace20553f@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/10zw46dz5dlwtd8s6l6xqnplbzy/Pickpocket",
             "类型": "Skill"
           },
           {
-            "名称": "Keen Eye",
+            "名称": "敏锐眼光",
+            "英文名": "Keen Eye",
             "图片": "https://s.bazaardb.gg/v1/z16.0/763c55da9644b8f0f19911e8559eb5c65a7180a2@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/yb1m0ydcn97y8jmcw56k4736fn/Keen-Eye",
@@ -5705,14 +5791,16 @@
         ],
         "技能": [
           {
-            "名称": "Hunker Down",
+            "名称": "暂避风头",
+            "英文名": "Hunker Down",
             "图片": "https://s.bazaardb.gg/v1/z16.0/4c251b804f3965e28bbc9d7d2e98b84bf32c97a2@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/8jzj1mv721fxzbz28kw365hdsc/Hunker-Down",
             "类型": "Skill"
           },
           {
-            "名称": "Toughness",
+            "名称": "坚固",
+            "英文名": "Toughness",
             "图片": "https://s.bazaardb.gg/v1/z16.0/62ee8d8b02805bb8e558bfc8c684232129dfbf57@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/6ftzs1pfdj3t4qgx9h53d6pwk0/Toughness",
@@ -5789,7 +5877,8 @@
         ],
         "技能": [
           {
-            "名称": "Extreme Comfort",
+            "名称": "极度舒适",
+            "英文名": "Extreme Comfort",
             "图片": "https://s.bazaardb.gg/v1/z16.0/a3ebf74d4fee937d627bb581de0505a263882dfb@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/177j706212gpysdcdvvnzl20wq6/Extreme-Comfort",
@@ -5872,7 +5961,8 @@
         ],
         "技能": [
           {
-            "名称": "Frontier Living",
+            "名称": "边境生活",
+            "英文名": "Frontier Living",
             "图片": "https://s.bazaardb.gg/v1/z16.0/7a39a6f25c6bf94eb9e9ae0b1a192e49c981849d@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/17w2153p571hm4dcs5m40p02qmj/Frontier-Living",
@@ -5943,7 +6033,8 @@
         ],
         "技能": [
           {
-            "名称": "Feeding Frenzy",
+            "名称": "暴食狂潮",
+            "英文名": "Feeding Frenzy",
             "图片": "https://s.bazaardb.gg/v1/z16.0/7210168917d485861c4a67daaffc3bdd312343d0@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/zz5449q9yqmfvpq6qxfs3w5bs0/Feeding-Frenzy",
@@ -6206,7 +6297,8 @@
         ],
         "技能": [
           {
-            "名称": "Sharpened Steel",
+            "名称": "钢铁磨砺",
+            "英文名": "Sharpened Steel",
             "图片": "https://s.bazaardb.gg/v1/z16.0/c00d837b062e629801ed88cdb0948e0a936538c8@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/n86gyhv73wm81hpspxgwtm3lxv/Sharpened-Steel",
@@ -6277,7 +6369,8 @@
         ],
         "技能": [
           {
-            "名称": "Snowstorm",
+            "名称": "雪暴",
+            "英文名": "Snowstorm",
             "图片": "https://s.bazaardb.gg/v1/z16.0/87cef47147155adefaf1f3bb4139eb1697cce3e4@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/16by6p7k347y27tfh4zjzs9yn4h/Snowstorm",
@@ -6354,14 +6447,16 @@
         ],
         "技能": [
           {
-            "名称": "Expert Pilot",
+            "名称": "专家飞行员",
+            "英文名": "Expert Pilot",
             "图片": "https://s.bazaardb.gg/v1/z16.0/ba3c14ac5b6c0b9cee0054d2d1abfc9680a5dcd7@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/h0tsmjbhzsb4p8fxx6zn5p8ys3/Expert-Pilot",
             "类型": "Skill"
           },
           {
-            "名称": "Command Ship",
+            "名称": "领头船",
+            "英文名": "Command Ship",
             "图片": "https://s.bazaardb.gg/v1/z16.0/64fd674123a3ebd2260eec49d55038b14d3c7a19@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/wtzw1t0nffngb0dbb0f003lvtk/Command-Ship",
@@ -6450,7 +6545,8 @@
         ],
         "技能": [
           {
-            "名称": "Seafaring",
+            "名称": "海上航行",
+            "英文名": "Seafaring",
             "图片": "https://s.bazaardb.gg/v1/z16.0/e44c5cb6564f9918784a012cdd8753ba499cfa6d@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/144qqs8wdmf52msnvdw2qglkhxk/Seafaring",
@@ -6533,21 +6629,24 @@
         ],
         "技能": [
           {
-            "名称": "Assault Focus",
+            "名称": "突击专注",
+            "英文名": "Assault Focus",
             "图片": "https://s.bazaardb.gg/v1/z16.0/21d1a780e9bb9b9ce178d0bd3894229f681885dd@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/1bvc57cs24cgw5vmvc1mkpfk81/Assault-Focus",
             "类型": "Skill"
           },
           {
-            "名称": "Strength",
+            "名称": "力量",
+            "英文名": "Strength",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63ecb0d003abf600af5b166d58a3b6c347c860af@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/19gtzndjjyb09p434w6vzwxvcbd/Strength",
             "类型": "Skill"
           },
           {
-            "名称": "Keen Eye",
+            "名称": "敏锐眼光",
+            "英文名": "Keen Eye",
             "图片": "https://s.bazaardb.gg/v1/z16.0/763c55da9644b8f0f19911e8559eb5c65a7180a2@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/yb1m0ydcn97y8jmcw56k4736fn/Keen-Eye",
@@ -6624,7 +6723,8 @@
         ],
         "技能": [
           {
-            "名称": "Left-Handed",
+            "名称": "左撇子",
+            "英文名": "Left-Handed",
             "图片": "https://s.bazaardb.gg/v1/z16.0/50f41ed676908c369d926a49183c37fe4651ff62@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/5xsfbt7xl63xpqpm0ptd76j2kv/Left-Handed",
@@ -6701,14 +6801,16 @@
         ],
         "技能": [
           {
-            "名称": "Augmented Weaponry",
+            "名称": "增强军火",
+            "英文名": "Augmented Weaponry",
             "图片": "https://s.bazaardb.gg/v1/z16.0/06d7a27be02d0a6fb1c0bee7a63cb887a7c9d0cb@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/cwq811nf0h8hxwsngyqgny2v8c/Augmented-Weaponry",
             "类型": "Skill"
           },
           {
-            "名称": "Augmented Defenses",
+            "名称": "增强防御",
+            "英文名": "Augmented Defenses",
             "图片": "https://s.bazaardb.gg/v1/z16.0/4ca8acaf7109fcb766b4c4727fcc7038487c0540@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/10l60vl7y3wk7zfkcgp3yg9ybf4/Augmented-Defenses",
@@ -6791,14 +6893,16 @@
         ],
         "技能": [
           {
-            "名称": "Nanobot Construction",
+            "名称": "纳米机器人建造",
+            "英文名": "Nanobot Construction",
             "图片": "https://s.bazaardb.gg/v1/z16.0/42f39505ad7eaca8531d2a3c8255d19f035042bf@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/33d5wgg48khyw2kb5stfz6g8w0/Nanobot-Construction",
             "类型": "Skill"
           },
           {
-            "名称": "Electrified Hull",
+            "名称": "带电外壳",
+            "英文名": "Electrified Hull",
             "图片": "https://s.bazaardb.gg/v1/z16.0/3876f10981ec68451cd0fc2d08af153c2c18a442@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/4p1tk4379t8d7z1hpvgc5szh1w/Electrified-Hull",
@@ -6869,7 +6973,8 @@
         ],
         "技能": [
           {
-            "名称": "Reaching the Summit",
+            "名称": "登峰之路",
+            "英文名": "Reaching the Summit",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63b64c7993cde10b1bb041f23a1d917a9d982739@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/pnpf32n8ff7nkywp1pmmb9jt84/Reaching-the-Summit",
@@ -6958,21 +7063,24 @@
         ],
         "技能": [
           {
-            "名称": "Rush",
+            "名称": "疾速",
+            "英文名": "Rush",
             "图片": "https://s.bazaardb.gg/v1/z16.0/9417d0df51c768076fd78cff9baf53c26bdce024@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/13hptxyjk7xvw17cklwknt2ymk4/Rush",
             "类型": "Skill"
           },
           {
-            "名称": "Keen Eye",
+            "名称": "敏锐眼光",
+            "英文名": "Keen Eye",
             "图片": "https://s.bazaardb.gg/v1/z16.0/763c55da9644b8f0f19911e8559eb5c65a7180a2@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/yb1m0ydcn97y8jmcw56k4736fn/Keen-Eye",
             "类型": "Skill"
           },
           {
-            "名称": "Trained",
+            "名称": "受训",
+            "英文名": "Trained",
             "图片": "https://s.bazaardb.gg/v1/z16.0/d4b044e45a8a5a5ab3cc14e3eed9e2ebe967f292@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/t6xxfztpwl843cb9qwl90bk91/Trained",
@@ -7049,7 +7157,8 @@
         ],
         "技能": [
           {
-            "名称": "Rigged",
+            "名称": "暗做手脚",
+            "英文名": "Rigged",
             "图片": "https://s.bazaardb.gg/v1/z16.0/f5c6d386f1e9b018254b1b0e518b5e66741f82c0@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/dv0l4ggc5t6wkdhz5vh8ksbz6q/Rigged",
@@ -7150,14 +7259,16 @@
         ],
         "技能": [
           {
-            "名称": "Paralyzing Rush",
+            "名称": "麻痹突袭",
+            "英文名": "Paralyzing Rush",
             "图片": "https://s.bazaardb.gg/v1/z16.0/8a70cde64fa8d647cbe48526dcc40523abde0d81@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/yszhx9c2p8tvj09hyz4xlk49xl/Paralyzing-Rush",
             "类型": "Skill"
           },
           {
-            "名称": "Trained",
+            "名称": "受训",
+            "英文名": "Trained",
             "图片": "https://s.bazaardb.gg/v1/z16.0/d4b044e45a8a5a5ab3cc14e3eed9e2ebe967f292@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/t6xxfztpwl843cb9qwl90bk91/Trained",
@@ -7234,21 +7345,24 @@
         ],
         "技能": [
           {
-            "名称": "Petrifying Gaze",
+            "名称": "石化凝视",
+            "英文名": "Petrifying Gaze",
             "图片": "https://s.bazaardb.gg/v1/z16.0/de9c4870507cecdbcd71b3706ee3862e3950ab8a@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/xy8hxm808t472gndpkcydhw02g/Petrifying-Gaze",
             "类型": "Skill"
           },
           {
-            "名称": "Paralytic Poison",
+            "名称": "麻痹剧毒",
+            "英文名": "Paralytic Poison",
             "图片": "https://s.bazaardb.gg/v1/z16.0/fd23e683e8f96e9c2f5761c13d5487531f746bf4@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/17q2lxckhl2hsfhbwfl89jlkbz6/Paralytic-Poison",
             "类型": "Skill"
           },
           {
-            "名称": "Initial Dose",
+            "名称": "最初一剂",
+            "英文名": "Initial Dose",
             "图片": "https://s.bazaardb.gg/v1/z16.0/a5fb41d026375a4d081343dedcd3750467688bad@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/m763kvfmfkbw0qqlgv2pgnly6/Initial-Dose",
@@ -7349,7 +7463,8 @@
         ],
         "技能": [
           {
-            "名称": "Strength",
+            "名称": "力量",
+            "英文名": "Strength",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63ecb0d003abf600af5b166d58a3b6c347c860af@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/19gtzndjjyb09p434w6vzwxvcbd/Strength",
@@ -7438,7 +7553,8 @@
         ],
         "技能": [
           {
-            "名称": "Beautiful Friendship",
+            "名称": "美好友谊",
+            "英文名": "Beautiful Friendship",
             "图片": "https://s.bazaardb.gg/v1/z16.0/05b4acf2740edd9b9c23a93f02c37c34f8e22e75@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/295lkjmcwpdmcgjldglqmdwlj4/Beautiful-Friendship",
@@ -7509,14 +7625,16 @@
         ],
         "技能": [
           {
-            "名称": "Power Broker",
+            "名称": "权力掮客",
+            "英文名": "Power Broker",
             "图片": "https://s.bazaardb.gg/v1/z16.0/ef9b6d7429df4cecdf154b9e4e97dc2d20fa4291@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/1hz7vqd3vnyhz5mkbxmsml7w6q/Power-Broker",
             "类型": "Skill"
           },
           {
-            "名称": "Crashing Waves",
+            "名称": "浪涛激荡",
+            "英文名": "Crashing Waves",
             "图片": "https://s.bazaardb.gg/v1/z16.0/fc312fd43e2e2b0d6475d90757780c8a8a128a6c@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/132xppcg5q63zfzw7fvdp6n1b8d/Crashing-Waves",
@@ -7605,7 +7723,8 @@
         ],
         "技能": [
           {
-            "名称": "Happy Accident",
+            "名称": "意外之喜",
+            "英文名": "Happy Accident",
             "图片": "https://s.bazaardb.gg/v1/z16.0/5e87f55bff2477152475750c6b678911e3c3c10c@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/q9yj47xg4w371mhkq3vzlkd12h/Happy-Accident",
@@ -7682,14 +7801,16 @@
         ],
         "技能": [
           {
-            "名称": "Healthy Friendship",
+            "名称": "健康友谊",
+            "英文名": "Healthy Friendship",
             "图片": "https://s.bazaardb.gg/v1/z16.0/e4e9f9f5a47239be63df639d795a20c7750ecd19@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/11wv6q0v61psnbcx1d9k4sywdw4/Healthy-Friendship",
             "类型": "Skill"
           },
           {
-            "名称": "Static Acceleration",
+            "名称": "静态加速",
+            "英文名": "Static Acceleration",
             "图片": "https://s.bazaardb.gg/v1/z16.0/943d50dc61417c4a6a1c3078a233e3be7310659d@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/7zhj95dq4lz9f570cx3tkyf8pg/Static-Acceleration",
@@ -7766,7 +7887,8 @@
         ],
         "技能": [
           {
-            "名称": "Ancient Vengeance",
+            "名称": "远古复仇",
+            "英文名": "Ancient Vengeance",
             "图片": "https://s.bazaardb.gg/v1/z16.0/25d4ba9448ae7c8a5e4623cc5d8baeb6ce8c61b1@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/8v8c9z3xty6yp8xsh5ygzwgjth/Ancient-Vengeance",
@@ -7855,14 +7977,16 @@
         ],
         "技能": [
           {
-            "名称": "Distributed Systems",
+            "名称": "分配系统",
+            "英文名": "Distributed Systems",
             "图片": "https://s.bazaardb.gg/v1/z16.0/963b2838f5a40ccf5cdbd8a34068b39c786ede1d@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/yg57nwfngsmj5480b8hqc7xqqw/Distributed-Systems",
             "类型": "Skill"
           },
           {
-            "名称": "Keen Eye",
+            "名称": "敏锐眼光",
+            "英文名": "Keen Eye",
             "图片": "https://s.bazaardb.gg/v1/z16.0/763c55da9644b8f0f19911e8559eb5c65a7180a2@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/yb1m0ydcn97y8jmcw56k4736fn/Keen-Eye",
@@ -7945,14 +8069,16 @@
         ],
         "技能": [
           {
-            "名称": "Cryomastery",
+            "名称": "霜寒专精",
+            "英文名": "Cryomastery",
             "图片": "https://s.bazaardb.gg/v1/z16.0/cf0ff89b6b20656e966eb118dc587ea898a670c4@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/15jwkgzplndfh0jt7wkndgqly57/Cryomastery",
             "类型": "Skill"
           },
           {
-            "名称": "Reaching the Summit",
+            "名称": "登峰之路",
+            "英文名": "Reaching the Summit",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63b64c7993cde10b1bb041f23a1d917a9d982739@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/pnpf32n8ff7nkywp1pmmb9jt84/Reaching-the-Summit",
@@ -8035,14 +8161,16 @@
         ],
         "技能": [
           {
-            "名称": "Thick Hide",
+            "名称": "厚皮",
+            "英文名": "Thick Hide",
             "图片": "https://s.bazaardb.gg/v1/z16.0/cb30ade84d81cf43eda25b32600267637f99157b@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/m7kydmbhfp9mtbh25z5kcmjn6h/Thick-Hide",
             "类型": "Skill"
           },
           {
-            "名称": "Improved Toxins",
+            "名称": "毒素增效",
+            "英文名": "Improved Toxins",
             "图片": "https://s.bazaardb.gg/v1/z16.0/75c31ab21a51aeb1b7152e95b586ea4b75803e52@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/133k4563lm40ttmb88mb3j70zmc/Improved-Toxins",
@@ -8281,7 +8409,8 @@
         ],
         "技能": [
           {
-            "名称": "Neophiliac",
+            "名称": "新奇狂人",
+            "英文名": "Neophiliac",
             "图片": "https://s.bazaardb.gg/v1/z16.0/3523a132d76a758cbe8a7b9edd27e5767be2c7be@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/1929jy1ky6sz5tl0w1cngjfs8qb/Neophiliac",
@@ -8352,7 +8481,8 @@
         ],
         "技能": [
           {
-            "名称": "Slow Burn",
+            "名称": "慢性灼烧",
+            "英文名": "Slow Burn",
             "图片": "https://s.bazaardb.gg/v1/z16.0/4ddbe81e462fc279c2ff71f6c5a32c6f2556eea9@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/126s8kpz3b17xvydwlk0gn6z7x5/Slow-Burn",
@@ -8441,7 +8571,8 @@
         ],
         "技能": [
           {
-            "名称": "Clean Storefront",
+            "名称": "整洁门面",
+            "英文名": "Clean Storefront",
             "图片": "https://s.bazaardb.gg/v1/z16.0/f1a9aa0fb64d32a62f903d1d227d0c146b781beb@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/jxhv9lyfjkt5ld0hjbpq9wczlb/Clean-Storefront",
@@ -8518,7 +8649,8 @@
         ],
         "技能": [
           {
-            "名称": "Waters of Infinity",
+            "名称": "无尽水源",
+            "英文名": "Waters of Infinity",
             "图片": "https://s.bazaardb.gg/v1/z16.0/d959a5c17a9ce719b42dfbfb26b59612b0709cba@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/vzdlf0d9stt4b7wd2zq5038mmw/Waters-of-Infinity",
@@ -8601,14 +8733,16 @@
         ],
         "技能": [
           {
-            "名称": "Relax Bro",
+            "名称": "兄弟别激动",
+            "英文名": "Relax Bro",
             "图片": "https://s.bazaardb.gg/v1/z16.0/5bf747f9b5883d3f89d4f25c8581b4dea214325c@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/f6q04ctnkfxhs8vmmv6813y957/Relax-Bro",
             "类型": "Skill"
           },
           {
-            "名称": "Right-Handed",
+            "名称": "右撇子",
+            "英文名": "Right-Handed",
             "图片": "https://s.bazaardb.gg/v1/z16.0/52fb508fbe2fdf58a220658850e23b2dbec09a5f@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/3wl0wt8729h4cfsq1sj56ftlw7/Right-Handed",
@@ -8697,7 +8831,8 @@
         ],
         "技能": [
           {
-            "名称": "Free Ride",
+            "名称": "免费乘车",
+            "英文名": "Free Ride",
             "图片": "https://s.bazaardb.gg/v1/z16.0/38eb837b33fea714d571014fcdb4f858b836d1f4@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/23s4wdkhdwg05y97lbng913sy4/Free-Ride",
@@ -8774,7 +8909,8 @@
         ],
         "技能": [
           {
-            "名称": "Beast Unleashed",
+            "名称": "暴走之兽",
+            "英文名": "Beast Unleashed",
             "图片": "https://s.bazaardb.gg/v1/z16.0/009960b482ec4ab5f355fe3bbb80dff72e1aa034@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/p102dqdltc84l0h0077m39hqx5/Beast-Unleashed",
@@ -8851,21 +8987,24 @@
         ],
         "技能": [
           {
-            "名称": "One Shot, One Kill",
+            "名称": "一发入魂",
+            "英文名": "One Shot, One Kill",
             "图片": "https://s.bazaardb.gg/v1/z16.0/3bc28d66b36cb9d3f7d53bb4722e6449ba4e271d@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/193p63yv1bnbn38ppc7vqlzyswj/One-Shot%2C-One-Kill",
             "类型": "Skill"
           },
           {
-            "名称": "Left-Handed",
+            "名称": "左撇子",
+            "英文名": "Left-Handed",
             "图片": "https://s.bazaardb.gg/v1/z16.0/50f41ed676908c369d926a49183c37fe4651ff62@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/5xsfbt7xl63xpqpm0ptd76j2kv/Left-Handed",
             "类型": "Skill"
           },
           {
-            "名称": "Right-Handed",
+            "名称": "右撇子",
+            "英文名": "Right-Handed",
             "图片": "https://s.bazaardb.gg/v1/z16.0/52fb508fbe2fdf58a220658850e23b2dbec09a5f@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/3wl0wt8729h4cfsq1sj56ftlw7/Right-Handed",
@@ -8942,14 +9081,16 @@
         ],
         "技能": [
           {
-            "名称": "Wake-Up Call",
+            "名称": "苏醒呼唤",
+            "英文名": "Wake-Up Call",
             "图片": "https://s.bazaardb.gg/v1/z16.0/1f19a7fca2894e719403fb3d0c520a917b5e0e67@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/ggqshnf6vs806gd31t3y91fc1g/Wake-Up-Call",
             "类型": "Skill"
           },
           {
-            "名称": "Heated Shells",
+            "名称": "高温弹壳",
+            "英文名": "Heated Shells",
             "图片": "https://s.bazaardb.gg/v1/z16.0/8b462c7574311262832ed87c37efc625cf463c32@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/lmh848mwdybxs4zb09958hvlg9/Heated-Shells",
@@ -9032,14 +9173,16 @@
         ],
         "技能": [
           {
-            "名称": "Executioner's Mark",
+            "名称": "行刑者印记",
+            "英文名": "Executioner's Mark",
             "图片": "https://s.bazaardb.gg/v1/z16.0/c833ea27a018a9d31580f31f7b6db1d15be83ea6@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/7yg0wpq5778q475d28q2w7z3ly/Executioner's-Mark",
             "类型": "Skill"
           },
           {
-            "名称": "Keen Eye",
+            "名称": "敏锐眼光",
+            "英文名": "Keen Eye",
             "图片": "https://s.bazaardb.gg/v1/z16.0/763c55da9644b8f0f19911e8559eb5c65a7180a2@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/yb1m0ydcn97y8jmcw56k4736fn/Keen-Eye",
@@ -9116,7 +9259,8 @@
         ],
         "技能": [
           {
-            "名称": "Energy Transference",
+            "名称": "能量转移",
+            "英文名": "Energy Transference",
             "图片": "https://s.bazaardb.gg/v1/z16.0/e4a5322dfa243e1480c54197d6c35d430ad051cf@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/gk7s6vnwzbj5qqtbgfjwhgmsp8/Energy-Transference",
@@ -9262,7 +9406,8 @@
         ],
         "技能": [
           {
-            "名称": "Tracer Fire",
+            "名称": "追踪火焰",
+            "英文名": "Tracer Fire",
             "图片": "https://s.bazaardb.gg/v1/z16.0/7911ccbcb7a0f5b8180384dca89f03edb57d7c9f@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/l6xgwy6ftvdf81y8t3jjm90w3c/Tracer-Fire",
@@ -9345,7 +9490,8 @@
         ],
         "技能": [
           {
-            "名称": "Gunner",
+            "名称": "炮手",
+            "英文名": "Gunner",
             "图片": "https://s.bazaardb.gg/v1/z16.0/947a30b37c152977b734c5c296bc212f9ef586c1@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/7qb43pgkp2vydptg1pttg2td54/Gunner",
@@ -9434,7 +9580,8 @@
         ],
         "技能": [
           {
-            "名称": "Slowed Targets",
+            "名称": "减速目标",
+            "英文名": "Slowed Targets",
             "图片": "https://s.bazaardb.gg/v1/z16.0/edf95b60f02025c735ce0ccfb6359bdc564ccbba@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/35g2j4wdv4ctj6ys3pzc4vwz7f/Slowed-Targets",
@@ -9511,7 +9658,8 @@
         ],
         "技能": [
           {
-            "名称": "The Right Tool",
+            "名称": "趁手工具",
+            "英文名": "The Right Tool",
             "图片": "https://s.bazaardb.gg/v1/z16.0/23d0f28471df7a80d8900ad13ce6272c56fec033@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/c6ydlftzv0lg9v473ms6xl1cd3/The-Right-Tool",
@@ -9576,14 +9724,16 @@
         ],
         "技能": [
           {
-            "名称": "Master Salesman",
+            "名称": "行商大师",
+            "英文名": "Master Salesman",
             "图片": "https://s.bazaardb.gg/v1/z16.0/10a98545d7f47699e1b17445a3faa972aca45cea@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/y63nd63ljxvy24znc57yvmyftn/Master-Salesman",
             "类型": "Skill"
           },
           {
-            "名称": "Trader",
+            "名称": "商人",
+            "英文名": "Trader",
             "图片": "https://s.bazaardb.gg/v1/z16.0/7ca85cf43dc71438a214d163994e55c3cd0cfffe@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/tl2wm2zw5n1gyfnqs5j7bfqqkt/Trader",
@@ -9666,21 +9816,24 @@
         ],
         "技能": [
           {
-            "名称": "Burning Infernal",
+            "名称": "燃烧炼狱",
+            "英文名": "Burning Infernal",
             "图片": "https://s.bazaardb.gg/v1/z16.0/8d5e410a4ab9381b5015bc1a4c115014a4f70d05@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/13m9t0ypk7jy17p5j9lv3mgbgcb/Burning-Infernal",
             "类型": "Skill"
           },
           {
-            "名称": "Tracer Fire",
+            "名称": "追踪火焰",
+            "英文名": "Tracer Fire",
             "图片": "https://s.bazaardb.gg/v1/z16.0/7911ccbcb7a0f5b8180384dca89f03edb57d7c9f@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/l6xgwy6ftvdf81y8t3jjm90w3c/Tracer-Fire",
             "类型": "Skill"
           },
           {
-            "名称": "Strength",
+            "名称": "力量",
+            "英文名": "Strength",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63ecb0d003abf600af5b166d58a3b6c347c860af@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/19gtzndjjyb09p434w6vzwxvcbd/Strength",
@@ -9769,14 +9922,16 @@
         ],
         "技能": [
           {
-            "名称": "Exposing Toxins",
+            "名称": "弱点毒素",
+            "英文名": "Exposing Toxins",
             "图片": "https://s.bazaardb.gg/v1/z16.0/b73a1382546e0bb232e0684bf1f07e41538da852@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/1cncsswpqjlbpczn90f2g5psj5/Exposing-Toxins",
             "类型": "Skill"
           },
           {
-            "名称": "Purifying Flame",
+            "名称": "净化烈焰",
+            "英文名": "Purifying Flame",
             "图片": "https://s.bazaardb.gg/v1/z16.0/32040391c2643a9d6a695c82d0d37404f9ba62fb@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/q8bk1m4yy8c2djdpb69n8qx71k/Purifying-Flame",
@@ -9853,21 +10008,24 @@
         ],
         "技能": [
           {
-            "名称": "Covering Fire",
+            "名称": "火力掩护",
+            "英文名": "Covering Fire",
             "图片": "https://s.bazaardb.gg/v1/z16.0/0c333d4e2988cc37956c738e842598b012de2686@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/135zy9b0bp337ksy7nfqfd1hf89/Covering-Fire",
             "类型": "Skill"
           },
           {
-            "名称": "Deadly Eye",
+            "名称": "致命眼光",
+            "英文名": "Deadly Eye",
             "图片": "https://s.bazaardb.gg/v1/z16.0/65e12d9fa9b0aec8cf0870d55b12d6e6958a74db@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/87xgm2b03kdn2ngjj58l22v8c5/Deadly-Eye",
             "类型": "Skill"
           },
           {
-            "名称": "Annexian Sabotage",
+            "名称": "安妮克西亚破坏",
+            "英文名": "Annexian Sabotage",
             "图片": "https://s.bazaardb.gg/v1/z16.0/8416e36b636c931a09c3c1b8476d2e5a8bc352dd@256.webp?v=7",
             "品质": "Legendary",
             "链接": "/card/hmj02wl27nlsyjfjkqslp1mz0t/Annexian-Sabotage",
@@ -9968,14 +10126,16 @@
         ],
         "技能": [
           {
-            "名称": "Ravenous",
+            "名称": "饕餮",
+            "英文名": "Ravenous",
             "图片": "https://s.bazaardb.gg/v1/z16.0/07549c4db4cf2e9b04a3c3d29dc105997a83cc02@256.webp?v=7",
             "品质": "Legendary",
             "链接": "/card/qxj0z78cgsm9qmxmzp5lpg564d/Ravenous",
             "类型": "Skill"
           },
           {
-            "名称": "Strength",
+            "名称": "力量",
+            "英文名": "Strength",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63ecb0d003abf600af5b166d58a3b6c347c860af@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/19gtzndjjyb09p434w6vzwxvcbd/Strength",
@@ -10046,28 +10206,32 @@
         ],
         "技能": [
           {
-            "名称": "Bonk",
+            "名称": "迎头痛击",
+            "英文名": "Bonk",
             "图片": "https://s.bazaardb.gg/v1/z16.0/7f6f37dd2cc1f709f17dec95a23f0e946cb54858@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/16g26s45vv6vb6qm7ht9gqb8p61/Bonk",
             "类型": "Skill"
           },
           {
-            "名称": "Long Strides",
+            "名称": "大步流星",
+            "英文名": "Long Strides",
             "图片": "https://s.bazaardb.gg/v1/z16.0/86c04828a48b06c3ca486c1f6ae72ff75c5cbf86@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/jtx5fqk3nn133bf6pnj2325v01/Long-Strides",
             "类型": "Skill"
           },
           {
-            "名称": "Brawler",
+            "名称": "斗士",
+            "英文名": "Brawler",
             "图片": "https://s.bazaardb.gg/v1/z16.0/083753b79da600be56b9e1be001bdfe15a6d35df@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/4dyxnx2sptwdcdh5hkn60jj0d9/Brawler",
             "类型": "Skill"
           },
           {
-            "名称": "Strength",
+            "名称": "力量",
+            "英文名": "Strength",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63ecb0d003abf600af5b166d58a3b6c347c860af@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/19gtzndjjyb09p434w6vzwxvcbd/Strength",
@@ -10150,7 +10314,8 @@
         ],
         "技能": [
           {
-            "名称": "Wax and Wane",
+            "名称": "月有圆缺",
+            "英文名": "Wax and Wane",
             "图片": "https://s.bazaardb.gg/v1/z16.0/938ddbf63b1c31c875ef03c1a46501822851b880@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/q2lsvtp3jbmzfdztq13w9jlpzh/Wax-and-Wane",
@@ -10233,21 +10398,24 @@
         ],
         "技能": [
           {
-            "名称": "Island Living",
+            "名称": "岛居生活",
+            "英文名": "Island Living",
             "图片": "https://s.bazaardb.gg/v1/z16.0/89b5f9430d6b653d26df8621e390f2d0f8e4e271@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/xpwv201pk5y4gxzkmd5wfkn8vv/Island-Living",
             "类型": "Skill"
           },
           {
-            "名称": "Hardly Workin'",
+            "名称": "假装努力",
+            "英文名": "Hardly Workin'",
             "图片": "https://s.bazaardb.gg/v1/z16.0/888697e1b81c53b0f79fa3845dd11321c2aac9fa@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/992c5sy3f1c7sphgxcbb295p2l/Hardly-Workin'",
             "类型": "Skill"
           },
           {
-            "名称": "Herbal Supplements",
+            "名称": "草药补剂",
+            "英文名": "Herbal Supplements",
             "图片": "https://s.bazaardb.gg/v1/z16.0/85321249b0fe374accb8760a7ca08451e64e2710@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/11tc8fvt747x4bpybfwnlmdqhvp/Herbal-Supplements",
@@ -10330,14 +10498,16 @@
         ],
         "技能": [
           {
-            "名称": "Underwater Wonder",
+            "名称": "水下奇观",
+            "英文名": "Underwater Wonder",
             "图片": "https://s.bazaardb.gg/v1/z16.0/0bc5e7dfe95682ff9776e295caaff0915f656064@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/h4cp8fydcp01zlyg32l21xjnvh/Underwater-Wonder",
             "类型": "Skill"
           },
           {
-            "名称": "Submerged",
+            "名称": "潜水",
+            "英文名": "Submerged",
             "图片": "https://s.bazaardb.gg/v1/z16.0/be53ebfbae58e4e03250a7296faa1313d92bbedc@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/82kt734914q32kw6gqw078dkfs/Submerged",
@@ -10420,7 +10590,8 @@
         ],
         "技能": [
           {
-            "名称": "Burst of Flame",
+            "名称": "烈焰爆发",
+            "英文名": "Burst of Flame",
             "图片": "https://s.bazaardb.gg/v1/z16.0/5958b9968e030fc5ae12b327c22b2f7559d17c44@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/17bjpnwhlc61ygzct1t580mmnwg/Burst-of-Flame",
@@ -10491,14 +10662,16 @@
         ],
         "技能": [
           {
-            "名称": "Void Energy",
+            "名称": "虚空能量",
+            "英文名": "Void Energy",
             "图片": "https://s.bazaardb.gg/v1/z16.0/0d0d481bbe47578b5b07e47ddcb33b087f970185@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/18sy5mq1zfjp1wpdf089ds6zzn5/Void-Energy",
             "类型": "Skill"
           },
           {
-            "名称": "Void Rage",
+            "名称": "虚空之怒",
+            "英文名": "Void Rage",
             "图片": "https://s.bazaardb.gg/v1/z16.0/b81f832f4a85c9a812d43c1a5a2e307404518753@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/98qyc4h5d008sm03xt8c7gw120/Void-Rage",
@@ -10581,7 +10754,8 @@
         ],
         "技能": [
           {
-            "名称": "Ambush",
+            "名称": "伏击",
+            "英文名": "Ambush",
             "图片": "https://s.bazaardb.gg/v1/z16.0/e02fcb79f2538a57ab41742aed7f0868911c29cf@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/153pm3kb7g6zxwd6lnvd8x85fd9/Ambush",
@@ -10658,7 +10832,8 @@
         ],
         "技能": [
           {
-            "名称": "Fiery",
+            "名称": "炽焰",
+            "英文名": "Fiery",
             "图片": "https://s.bazaardb.gg/v1/z16.0/e035a48f6bcd9d7076996251dad9989942981fa3@256.webp?v=7",
             "品质": "Bronze",
             "链接": "/card/yn7vwphhqy8k99dw77zsfznbf6/Fiery",
@@ -10735,28 +10910,32 @@
         ],
         "技能": [
           {
-            "名称": "Wanderlust",
+            "名称": "漫游之心",
+            "英文名": "Wanderlust",
             "图片": "https://s.bazaardb.gg/v1/z16.0/13aae73082d911ddff8683c2c728bdaaa0d39ce2@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/v4v0z4h53fkb9x7cv136fvc7pl/Wanderlust",
             "类型": "Skill"
           },
           {
-            "名称": "Left-Handed",
+            "名称": "左撇子",
+            "英文名": "Left-Handed",
             "图片": "https://s.bazaardb.gg/v1/z16.0/50f41ed676908c369d926a49183c37fe4651ff62@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/5xsfbt7xl63xpqpm0ptd76j2kv/Left-Handed",
             "类型": "Skill"
           },
           {
-            "名称": "Lethargy",
+            "名称": "倦怠",
+            "英文名": "Lethargy",
             "图片": "https://s.bazaardb.gg/v1/z16.0/132fb614b179d09a9dba2c8089fe011edec09768@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/n9lv27j0ls1dfh8bxp1xq49pcy/Lethargy",
             "类型": "Skill"
           },
           {
-            "名称": "Secrets of Life",
+            "名称": "生命奥妙",
+            "英文名": "Secrets of Life",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63809d628eb36126daff7d2caa31f2607277edce@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/h06pgc6046gf6mwtbff61nv8cb/Secrets-of-Life",
@@ -10841,7 +11020,8 @@
         ],
         "技能": [
           {
-            "名称": "Scramble Fighters",
+            "名称": "紧急起飞",
+            "英文名": "Scramble Fighters",
             "图片": "https://s.bazaardb.gg/v1/z16.0/4827a33e55f6f3254bfbdd3b580b32f28672608f@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/14vt9n9yb6mscjdlj5x6h8qb9pn/Scramble-Fighters",
@@ -10918,14 +11098,16 @@
         ],
         "技能": [
           {
-            "名称": "Blizzard",
+            "名称": "暴雪",
+            "英文名": "Blizzard",
             "图片": "https://s.bazaardb.gg/v1/z16.0/4e6651181b2d3f4304c573448f3e4f87151a1696@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/y20w1j0wt3ww46fkvl21lg2x24/Blizzard",
             "类型": "Skill"
           },
           {
-            "名称": "Invigorating Cold",
+            "名称": "提神寒气",
+            "英文名": "Invigorating Cold",
             "图片": "https://s.bazaardb.gg/v1/z16.0/89147b725aa55134f8d6913b4e9d5e62ae11ce58@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/12p9vvyt46388m6l0yl9h1xjbtw/Invigorating-Cold",
@@ -11002,7 +11184,8 @@
         ],
         "技能": [
           {
-            "名称": "Sabotage",
+            "名称": "破坏行动",
+            "英文名": "Sabotage",
             "图片": "https://s.bazaardb.gg/v1/z16.0/8056d479c4d66ca86eceff68528f2b72a57b702d@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/19pwcxmfy02xyftpy0fsmlnkgf1/Sabotage",
@@ -11103,7 +11286,8 @@
         ],
         "技能": [
           {
-            "名称": "Dual Wield",
+            "名称": "双持",
+            "英文名": "Dual Wield",
             "图片": "https://s.bazaardb.gg/v1/z16.0/6bdd15cae291a5d4b66f10134b52c635cdcfc7cc@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/cmhvlhzcwfkl4nn7x4x4l6t01m/Dual-Wield",
@@ -11198,21 +11382,24 @@
         ],
         "技能": [
           {
-            "名称": "Arms Race",
+            "名称": "军备竞赛",
+            "英文名": "Arms Race",
             "图片": "https://s.bazaardb.gg/v1/z16.0/9e08ac321de2026fb46b0db23f7770e1e8a6e32a@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/4f5gs9zqw8b82m3t716zq46mlz/Arms-Race",
             "类型": "Skill"
           },
           {
-            "名称": "Hyper Focus",
+            "名称": "聚能专注",
+            "英文名": "Hyper Focus",
             "图片": "https://s.bazaardb.gg/v1/z16.0/98923f06f97be747d3eed005cde73f1808d8bea0@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/q95b9wyd1pplntnv8ngqxpv78h/Hyper-Focus",
             "类型": "Skill"
           },
           {
-            "名称": "Strength",
+            "名称": "力量",
+            "英文名": "Strength",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63ecb0d003abf600af5b166d58a3b6c347c860af@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/19gtzndjjyb09p434w6vzwxvcbd/Strength",
@@ -11283,14 +11470,16 @@
         ],
         "技能": [
           {
-            "名称": "Draconic Rage",
+            "名称": "龙性狂焰",
+            "英文名": "Draconic Rage",
             "图片": "https://s.bazaardb.gg/v1/z16.0/4590d668a822d01f4ea59f4bb091b7b9dc79b9dd@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/kwjgjd04m8tbn3mk5kk8031s4d/Draconic-Rage",
             "类型": "Skill"
           },
           {
-            "名称": "Regenerative",
+            "名称": "元气恢复",
+            "英文名": "Regenerative",
             "图片": "https://s.bazaardb.gg/v1/z16.0/62aef87abef2e185b2b53fc9543f385d5948b442@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/vbhd4bg4n4vk8d5g2vzy7ltskv/Regenerative",
@@ -11379,14 +11568,16 @@
         ],
         "技能": [
           {
-            "名称": "Chilling Touch",
+            "名称": "寒霜之触",
+            "英文名": "Chilling Touch",
             "图片": "https://s.bazaardb.gg/v1/z16.0/e36654cc17d6428cfb2a2eea783d5718d78d8449@256.webp?v=7",
             "品质": "Silver",
             "链接": "/card/6yfzkwvl307dq48nz7y1n1chsy/Chilling-Touch",
             "类型": "Skill"
           },
           {
-            "名称": "Petrifying Gaze",
+            "名称": "石化凝视",
+            "英文名": "Petrifying Gaze",
             "图片": "https://s.bazaardb.gg/v1/z16.0/de9c4870507cecdbcd71b3706ee3862e3950ab8a@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/xy8hxm808t472gndpkcydhw02g/Petrifying-Gaze",
@@ -11457,7 +11648,8 @@
         ],
         "技能": [
           {
-            "名称": "Workout Routine",
+            "名称": "健身日常",
+            "英文名": "Workout Routine",
             "图片": "https://s.bazaardb.gg/v1/z16.0/8b347a6d38e310aeba8e10e26a922cc62633dfa4@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/19k9ff7vfmmf847z40q7g63yvfg/Workout-Routine",
@@ -11528,14 +11720,16 @@
         ],
         "技能": [
           {
-            "名称": "Hypnotic Drain",
+            "名称": "催眠吸取",
+            "英文名": "Hypnotic Drain",
             "图片": "https://s.bazaardb.gg/v1/z16.0/b70365f681bee63d5c2d146808f548f84d9796a9@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/1jwlym97khdlglgz920140fqg4/Hypnotic-Drain",
             "类型": "Skill"
           },
           {
-            "名称": "Rate Limiter",
+            "名称": "限速器",
+            "英文名": "Rate Limiter",
             "图片": "https://s.bazaardb.gg/v1/z16.0/4a0849851183b7dbc2057c945a4f6f40120e5cf3@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/yjpc24l3j23s4k3360l23j7hgz/Rate-Limiter",
@@ -11612,14 +11806,16 @@
         ],
         "技能": [
           {
-            "名称": "Into the Void",
+            "名称": "遁入虚空",
+            "英文名": "Into the Void",
             "图片": "https://s.bazaardb.gg/v1/z16.0/11e6ad950e8864897bad401ba0d41a00e6508e4a@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/vfddtt0j3dc4l4323v496nx11v/Into-the-Void",
             "类型": "Skill"
           },
           {
-            "名称": "Void Render",
+            "名称": "空蚀裂解器",
+            "英文名": "Void Render",
             "图片": "https://s.bazaardb.gg/v1/z16.0/9b8f07acf779bd815677215da4e5519987e6aaac@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/l3b255ft744cy69677vltb2qlx/Void-Render",
@@ -11684,21 +11880,24 @@
         ],
         "技能": [
           {
-            "名称": "Prosperity",
+            "名称": "繁荣昌盛",
+            "英文名": "Prosperity",
             "图片": "https://s.bazaardb.gg/v1/z16.0/36bd7093775387add610b4531021b5161db6d564@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/9fl5kpj7y3mv9jw97pddflsj4k/Prosperity",
             "类型": "Skill"
           },
           {
-            "名称": "Trickle Down Economics",
+            "名称": "涓滴经济学",
+            "英文名": "Trickle Down Economics",
             "图片": "https://s.bazaardb.gg/v1/z16.0/489e5432f14446e001089a4dcc04ab9cb5eccbb4@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/hlw5q8nmvb8c2y441c0hz7bch8/Trickle-Down-Economics",
             "类型": "Skill"
           },
           {
-            "名称": "Toughness",
+            "名称": "坚固",
+            "英文名": "Toughness",
             "图片": "https://s.bazaardb.gg/v1/z16.0/62ee8d8b02805bb8e558bfc8c684232129dfbf57@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/6ftzs1pfdj3t4qgx9h53d6pwk0/Toughness",
@@ -11769,21 +11968,24 @@
         ],
         "技能": [
           {
-            "名称": "Fiery Rebirth",
+            "名称": "炽焰重生",
+            "英文名": "Fiery Rebirth",
             "图片": "https://s.bazaardb.gg/v1/z16.0/2a2d050d59ceb610ae116d82e9913353f02169fb@256.webp?v=7",
             "品质": "Legendary",
             "链接": "/card/1hzpp0l65tnm9mvghdltn59w0v/Fiery-Rebirth",
             "类型": "Skill"
           },
           {
-            "名称": "Right-Handed",
+            "名称": "右撇子",
+            "英文名": "Right-Handed",
             "图片": "https://s.bazaardb.gg/v1/z16.0/52fb508fbe2fdf58a220658850e23b2dbec09a5f@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/3wl0wt8729h4cfsq1sj56ftlw7/Right-Handed",
             "类型": "Skill"
           },
           {
-            "名称": "Final Flame",
+            "名称": "终焰",
+            "英文名": "Final Flame",
             "图片": "https://s.bazaardb.gg/v1/z16.0/70b1f10e48782e2ad364a3bc15b349a1ce2f8fba@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/1ztxb8t580xyg3n843nqc5qd6p/Final-Flame",
@@ -11860,21 +12062,24 @@
         ],
         "技能": [
           {
-            "名称": "Unwavering",
+            "名称": "坚定不移",
+            "英文名": "Unwavering",
             "图片": "https://s.bazaardb.gg/v1/z16.0/97f57785e691f124c61e36f51ff836e62d6ad9df@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/fj0l9n6dm7cqjx4591d2nxyj0v/Unwavering",
             "类型": "Skill"
           },
           {
-            "名称": "Strength",
+            "名称": "力量",
+            "英文名": "Strength",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63ecb0d003abf600af5b166d58a3b6c347c860af@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/19gtzndjjyb09p434w6vzwxvcbd/Strength",
             "类型": "Skill"
           },
           {
-            "名称": "Flurry of Blows",
+            "名称": "连环打击",
+            "英文名": "Flurry of Blows",
             "图片": "https://s.bazaardb.gg/v1/z16.0/afb6aec7d2cec644ee6e6a79b34184956431e0ec@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/7k9vytt5g5g1s7y3nkgd8fbhh1/Flurry-of-Blows",
@@ -11963,14 +12168,16 @@
         ],
         "技能": [
           {
-            "名称": "Jack of All Trades",
+            "名称": "全能手",
+            "英文名": "Jack of All Trades",
             "图片": "https://s.bazaardb.gg/v1/z16.0/22869c343ab24af01b03d51c8a433c4179577db0@256.webp?v=7",
             "品质": "Gold",
             "链接": "/card/3nv9w6c8mc2bkv3cchbml8qbdb/Jack-of-All-Trades",
             "类型": "Skill"
           },
           {
-            "名称": "Strength",
+            "名称": "力量",
+            "英文名": "Strength",
             "图片": "https://s.bazaardb.gg/v1/z16.0/63ecb0d003abf600af5b166d58a3b6c347c860af@256.webp?v=7",
             "品质": "Diamond",
             "链接": "/card/19gtzndjjyb09p434w6vzwxvcbd/Strength",
