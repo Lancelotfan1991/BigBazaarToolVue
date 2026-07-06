@@ -127,6 +127,13 @@
             {{ typeof d === 'object' ? (d.text || '') : d }}
           </div>
         </div>
+        <div v-if="bubbleAttrs.length" class="bubble-divider" />
+        <div v-if="bubbleAttrs.length" class="bubble-attrs">
+          <div v-for="attr in bubbleAttrs" :key="attr.label" class="bubble-attr-item">
+            <span class="bubble-attr-label">{{ attr.label }}</span>
+            <span class="bubble-attr-value">{{ attr.value }}</span>
+          </div>
+        </div>
         <div class="bubble-level-bar">
           <span class="bubble-level-label" :style="{ color: tierBorder(bubbleData.currentTier || bubbleData.tier) }">{{ bubbleData.currentTier || bubbleData.tier }}</span>
           <div class="bubble-level-dots">
@@ -220,6 +227,7 @@ const bubbleNextTier = computed(() => {
   const all = bubbleAllTiers.value
   return bubbleIsMax.value ? all[0] : all[bubbleCurIdx.value + 1]
 })
+const bubbleAttrs = computed(() => bubbleAttrEntries())
 
 // Helpers
 function tagZh(t) { return TAG_ZH[t] || t }
@@ -240,6 +248,36 @@ function skillTierBorderStyle(tier) {
   return b ? 'border-color:' + b + ';border-width:3px' : ''
 }
 
+const TIER_ATTR_ZH = {
+  'AmmoMax': '弹药', 'BurnApplyAmount': '燃烧', 'ChargeTargets': '充能目标',
+  'CritChance': '暴击率', 'Custom_3': '属性3', 'Custom_4': '属性4',
+  'EnchantTargets': '附魔目标', 'FlyingTargets': '飞行目标',
+  'FreezeAmount': '冻结', 'FreezeTargets': '冻结目标',
+  'HasteAmount': '急速', 'HasteTargets': '急速目标',
+  'PoisonApplyAmount': '中毒', 'RageApplyAmount': '激怒',
+  'RegenApplyAmount': '再生', 'ReloadAmount': '装弹',
+  'ReloadTargets': '装弹目标', 'ShieldApplyAmount': '护盾',
+  'SlowAmount': '减速', 'SlowTargets': '减速目标',
+  'UpgradeTargets': '升级目标', '多重施法': '多重释放', '充能次数': '充能',
+  '冷却时间(ms)': '冷却', '伤害值': '伤害', '治疗值': '治疗',
+  '自定义属性0': '属性A', '自定义属性1': '属性B', '自定义属性2': '属性C'
+}
+const TIME_KEYS = new Set(['冷却时间(ms)', 'HasteAmount', 'SlowAmount', 'FreezeAmount'])
+
+function bubbleAttrEntries() {
+  if (!bubbleData.value) return []
+  const attrs = bubbleData.value.baseAttrs || {}
+  return Object.entries(attrs)
+    .filter(([k]) => !k.startsWith('自定义属性') && k !== '出售价格' && k !== '购买价格')
+    .slice(0, 8)
+    .map(([k, v]) => ({
+      label: TIER_ATTR_ZH[k] || k,
+      value: TIME_KEYS.has(k) && typeof v === 'number' && v > 0
+        ? (v / 1000 % 1 === 0 ? (v / 1000).toFixed(0) : (v / 1000).toFixed(1)) + 's'
+        : v
+    }))
+}
+
 // Load items
 onMounted(async () => {
   const cache = await dataStore.ensureAllItemsCache()
@@ -250,6 +288,7 @@ onMounted(async () => {
     tags: item['显示标签'] || [],
     desc: item['效果说明'] || [],
     tierLevels: item['品质层级'] || {},
+    baseAttrs: item['基础属性'] || {},
   }))
   boardSkillsList.value = (cache?.['技能'] || []).map(item => ({
     name: item['名称'], nameEn: item['英文名'],
@@ -258,6 +297,7 @@ onMounted(async () => {
     tags: item['显示标签'] || [],
     desc: item['效果说明'] || [],
     tierLevels: item['品质层级'] || {},
+    baseAttrs: item['基础属性'] || {},
   }))
   if (route.hash && route.hash.startsWith('#board=')) {
     restoreFromHash(route.hash.substring(7))
@@ -303,7 +343,7 @@ function addItemAt(nameEn, targetPos, tierOverride) {
   if (startIdx === -1) return
   const uid = ++uidCounter.value
   const curTier = tierOverride || item.tier
-  const entry = { name: item.name, nameEn: item.nameEn, size: item.size, uid, spanStart: startIdx, spanSize: slotSize, img: item.img, tier: item.tier, currentTier: curTier, desc: item.desc, tierLevels: item.tierLevels, tags: item.tags }
+  const entry = { name: item.name, nameEn: item.nameEn, size: item.size, uid, spanStart: startIdx, spanSize: slotSize, img: item.img, tier: item.tier, currentTier: curTier, desc: item.desc, tierLevels: item.tierLevels, tags: item.tags, baseAttrs: item.baseAttrs }
   for (let j = 0; j < slotSize; j++) { slots[startIdx + j] = { ...entry } }
   removedItems.value = removedItems.value.filter(r => r.uid !== uid)
   searchQuery.value = ''
@@ -329,7 +369,7 @@ function toggleSkill(nameEn) {
   } else {
     const skill = boardSkillsList.value.find(s => s.nameEn === nameEn)
     if (!skill) return
-    addedSkills.value.push({ name: skill.name, nameEn: skill.nameEn, img: skill.img, tier: skill.tier, currentTier: skill.tier, desc: skill.desc, tierLevels: skill.tierLevels, size: skill.size, tags: skill.tags })
+    addedSkills.value.push({ name: skill.name, nameEn: skill.nameEn, img: skill.img, tier: skill.tier, currentTier: skill.tier, desc: skill.desc, tierLevels: skill.tierLevels, size: skill.size, tags: skill.tags, baseAttrs: skill.baseAttrs })
   }
   skillQuery.value = ''
   skillSearchResults.value = []
