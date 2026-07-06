@@ -184,7 +184,7 @@
     </div>
 
     <div
-      v-if="monStats.length || monBoard.length"
+      v-if="monStats.length || monBoard.length || monSkills.length"
       class="card-monster-info"
     >
       <div
@@ -215,6 +215,28 @@
             />
             <div class="slot-name">
               {{ b.name }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        v-if="monSkills.length"
+        class="mon-board"
+      >
+        <div class="mon-board-row">
+          <div
+            v-for="(sk, i) in monSkills"
+            :key="'skill-' + i"
+            class="mon-board-slot size-S"
+            :class="'tier-' + (sk.tier || 'Bronze')"
+            @click.stop="openSkill(sk.link)"
+          >
+            <div
+              class="slot-img-wrap"
+              :style="sk.img ? { backgroundImage: 'url(' + sk.img + ')' } : {}"
+            />
+            <div class="slot-name">
+              {{ sk.name }}
             </div>
           </div>
         </div>
@@ -432,6 +454,15 @@ const monBoard = computed(() => {
     tier: b['\u54c1\u8d28'] || 'Bronze'
   }))
 })
+const monSkills = computed(() => {
+  const skills = monInfo.value?.['技能'] || []
+  return skills.map(sk => ({
+    name: sk['名称'] || '',
+    img: sk['图片'] || '',
+    tier: sk['品质'] || 'Bronze',
+    link: sk['链接'] || ''
+  }))
+})
 
 function handleClick() {
   if (fullLink.value) {
@@ -442,6 +473,12 @@ function handleClick() {
 
 function searchItem(itemName) {
   if (itemName) filterStore.searchQuery = itemName
+}
+
+function openSkill(link) {
+  if (link) {
+    window.open(link.startsWith('http') ? link : 'https://bazaardb.gg' + link, '_blank')
+  }
 }
 
 function fallback(e) {
