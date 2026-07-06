@@ -228,7 +228,7 @@
           :key="'skill-' + i"
           class="mon-skill-slot"
           :class="'tier-' + (sk.tier || 'Bronze')"
-          @click.stop="searchItem(sk.name)"
+          @click.stop="searchSkill(sk.name)"
         >
           <div
             class="skill-img"
@@ -266,6 +266,7 @@
 
 <script setup>
 import { computed } from 'vue'
+import { useRouter } from 'vue-router'
 import {
   TIER_ZH, SIZE_ZH, TIER_ATTR_ZH, TAG_ZH,
   HERO_COLORS, TIER_CLASS
@@ -281,6 +282,7 @@ const props = defineProps({
 const emit = defineEmits(['click'])
 
 const filterStore = useFilterStore()
+const router = useRouter()
 const currentTab = computed(() => filterStore.currentTab)
 
 // Basic fields
@@ -471,6 +473,14 @@ function handleClick() {
 
 function searchItem(itemName) {
   if (itemName) filterStore.searchQuery = itemName
+}
+
+function searchSkill(skillName) {
+  if (skillName) {
+    filterStore.searchQuery = skillName
+    filterStore.setTab('skills')
+    router.push({ name: 'hero', params: { name: 'All' } })
+  }
 }
 
 

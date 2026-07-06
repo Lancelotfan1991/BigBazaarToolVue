@@ -1,11 +1,13 @@
 import { describe, it, expect, beforeEach } from 'vitest'
+import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import ItemCard from '@/components/ItemCard.vue'
 import { setActivePinia, createPinia } from 'pinia'
 import { createRouter, createWebHistory } from 'vue-router'
 import { useDataStore, TIER_ATTR_ZH } from '@/stores/dataStore'
+import { useFilterStore } from '@/stores/filterStore'
 
-const router = createRouter({ history: createWebHistory(), routes: [{ path: '/', component: { template: '<div />' } }] })
+const router = createRouter({ history: createWebHistory(), routes: [{ path: '/', component: { template: '<div />' } }, { path: '/hero/:name', name: 'hero', component: { template: '<div />' } }] })
 
 function makeCard(overrides = {}) {
   return {
@@ -149,5 +151,92 @@ describe('T1: ItemCard 内联差异标记', () => {
     })
     expect(w.find('.card-basic-diff').exists()).toBe(false)
     expect(w.find('.diff-old').exists()).toBe(false)
+  })
+})
+
+
+describe('T1: ItemCard 怪物技能展示与交互', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia())
+  })
+
+  function makeMonsterCard(skills = []) {
+    return makeCard({
+      '怪物信息': {
+        '出现天数': 4,
+        '血量': 500,
+        '物品栏': [],
+        '技能': skills
+      },
+      '战斗奖励': { '金币': 3, '经验': 5 }
+    })
+  }
+
+  it('怪物技能应以圆形图标展示', () => {
+    const card = makeMonsterCard([
+      { '名称': '暴走崩溃', '英文名': 'Crash Out', '图片': 'https://test.webp', '品质': 'Gold' }
+    ])
+    const w = mount(ItemCard, {
+      props: { card },
+      global: { plugins: [router] }
+    })
+    expect(w.find('.mon-skills-row').exists()).toBe(true)
+    expect(w.find('.mon-skill-slot').exists()).toBe(true)
+    expect(w.find('.skill-img').exists()).toBe(true)
+    expect(w.find('.skill-name-label').text()).toBe('暴走崩溃')
+  })
+
+  it('多个技能应全部展示', () => {
+    const card = makeMonsterCard([
+      { '名称': '空中突袭', '品质': 'Diamond' },
+      { '名称': '力量', '品质': 'Diamond' }
+    ])
+    const w = mount(ItemCard, {
+      props: { card },
+      global: { plugins: [router] }
+    })
+    const slots = w.findAll('.mon-skill-slot')
+    expect(slots.length).toBe(2)
+    const names = w.findAll('.skill-name-label').map(n => n.text())
+    expect(names).toContain('空中突袭')
+    expect(names).toContain('力量')
+  })
+
+  it('技能品质边框色应正确应用', () => {
+    const card = makeMonsterCard([
+      { '名称': '暴走崩溃', '品质': 'Gold' }
+    ])
+    const w = mount(ItemCard, {
+      props: { card },
+      global: { plugins: [router] }
+    })
+    expect(w.find('.mon-skill-slot').classes()).toContain('tier-Gold')
+  })
+
+  it('无技能的怪物不应显示技能行', () => {
+    const card = makeMonsterCard([])
+    const w = mount(ItemCard, {
+      props: { card },
+      global: { plugins: [router] }
+    })
+    expect(w.find('.mon-skills-row').exists()).toBe(false)
+  })
+
+  it('点击技能应设置搜索词并切换到技能tab', async () => {
+    const card = makeMonsterCard([
+      { '名称': '暴走崩溃', '品质': 'Gold' }
+    ])
+    const w = mount(ItemCard, {
+      props: { card },
+      global: { plugins: [router] }
+    })
+    const filterStore = useFilterStore()
+
+    await w.find('.mon-skill-slot').trigger('click')
+    await nextTick()
+
+    // searchSkill should set search query and switch to skills tab
+    expect(filterStore.searchQuery).toBe('暴走崩溃')
+    expect(filterStore.currentTab).toBe('skills')
   })
 })
