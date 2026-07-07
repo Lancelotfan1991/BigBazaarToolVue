@@ -8,7 +8,10 @@
         @change="dataStore.switchSeason(dataStore.season)"
       >
         <option value="">
-          S16（最新）
+          S16.1（最新）
+        </option>
+        <option value="s16">
+          S16
         </option>
         <option value="s15">
           S15

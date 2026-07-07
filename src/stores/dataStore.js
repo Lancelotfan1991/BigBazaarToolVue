@@ -1,7 +1,7 @@
-import { defineStore } from 'pinia'
+﻿import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 
-export const SEASON_DIRS = { '': '/data', 's15': '/data-s15', 's16': '/data' }
+export const SEASON_DIRS = { '': '/data-s16.1', 's15': '/data-s15', 's16': '/data-s16', 's16.1': '/data-s16.1' }
 
 export const HERO_DISPLAY = {
   'Vanessa': '瓦妮莎', 'Karnok': '卡诺克', 'Dooley': '杜利',
@@ -57,7 +57,7 @@ export const useDataStore = defineStore('data', () => {
   const season = ref('')
   const allItemsCache = ref(null)
 
-  const DATA_DIR = computed(() => SEASON_DIRS[season.value] || '/data')
+  const DATA_DIR = computed(() => SEASON_DIRS[season.value] || '/data-s16.1')
 
   async function loadHeroes() {
     const resp = await fetch(`${DATA_DIR.value}/heroes.json`)
@@ -112,3 +112,4 @@ export const useDataStore = defineStore('data', () => {
     loadHeroes, loadHeroData, loadGameData, ensureAllItemsCache, switchSeason, reset
   }
 })
+

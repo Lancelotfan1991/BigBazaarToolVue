@@ -1,4 +1,4 @@
-
+﻿
 import { describe, it, expect, beforeEach, vi } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 import { useDataStore, SEASON_DIRS } from '@/stores/dataStore'
@@ -11,9 +11,9 @@ describe('T0 - dataStore 核心行为', () => {
     store = useDataStore()
   })
 
-  it('当 season 为 "" 时，DATA_DIR 为 "/data"', () => {
+  it('当 season 为 "" 时，DATA_DIR 为 "/data-s16.1"', () => {
     store.season = ''
-    expect(store.DATA_DIR).toBe('/data')
+    expect(store.DATA_DIR).toBe('/data-s16.1')
   })
 
   it('当 season 为 "s15" 时，DATA_DIR 为 "/data-s15"', () => {
