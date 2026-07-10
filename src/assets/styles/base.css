@@ -1,4 +1,4 @@
-* {
+﻿* {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -1662,6 +1662,24 @@
     .bubble-type {
       font-size: 10px; font-weight: 600; color: var(--accent);
       margin-right: 4px;
+    }
+    /* Bubble attributes */
+    .bubble-attrs {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+    }
+    .bubble-attr-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 5px 8px; border-radius: 6px;
+      background: var(--surface2); font-size: 12px;
+    }
+    .bubble-attr-label {
+      color: var(--text2); font-weight: 500;
+    }
+    .bubble-attr-value {
+      color: var(--text); font-weight: 700;
+    }
+    .bubble-attr-next {
+      font-size: 10px; color: #2ecc71; margin-left: 4px; font-weight: 600;
     }
     .bubble-level-bar {
       display: flex; align-items: center; gap: 4px;

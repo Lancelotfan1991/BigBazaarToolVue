@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="board-viewer active" :class="{ 'screenshot-mode': screenshotMode }">
     <div class="back-bar">
       <button class="back-btn" @click="router.push('/')">← 返回</button>
@@ -112,8 +112,8 @@
           <div class="bubble-title">
             <div class="bubble-name">{{ bubbleData.name }}</div>
             <div class="bubble-badges">
-              <span v-if="bubbleData.size" class="bubble-size" :style="{ background: sizeColor(bubbleData.size) }">{{ sizeLabel(bubbleData.size) }} ({{ bubbleData.size }})</span>
-              <span v-if="bubbleData.currentTier || bubbleData.tier" class="bubble-tier" :style="tierBadgeStyle(bubbleData.currentTier || bubbleData.tier)">{{ bubbleData.currentTier || bubbleData.tier }}</span>
+              <span v-if="bubbleData.size" class="bubble-size" :style="{ background: sizeColor(bubbleData.size) }">{{ bubbleData.size }}</span>
+              <span v-if="bubbleData.currentTier || bubbleData.tier" class="bubble-tier" :style="tierBadgeStyle(bubbleData.currentTier || bubbleData.tier)">{{ tierDisplay(bubbleData.currentTier || bubbleData.tier) }}</span>
             </div>
             <div v-if="bubbleData.tags && bubbleData.tags.length" class="bubble-tags">
               <span v-for="t in bubbleData.tags" :key="t" class="bubble-tag">{{ tagZh(t) }}</span>
@@ -131,18 +131,18 @@
         <div v-if="bubbleAttrs.length" class="bubble-attrs">
           <div v-for="attr in bubbleAttrs" :key="attr.label" class="bubble-attr-item">
             <span class="bubble-attr-label">{{ attr.label }}</span>
-            <span class="bubble-attr-value">{{ attr.value }}</span>
+            <span class="bubble-attr-value">{{ attr.value }}<span v-if="attr.nextVal" class="bubble-attr-next"> → {{ attr.nextVal }}</span></span>
           </div>
         </div>
         <div class="bubble-level-bar">
-          <span class="bubble-level-label" :style="{ color: tierBorder(bubbleData.currentTier || bubbleData.tier) }">{{ bubbleData.currentTier || bubbleData.tier }}</span>
+          <span class="bubble-level-label" :style="{ color: tierBorder(bubbleData.currentTier || bubbleData.tier) }">{{ tierDisplay(bubbleData.currentTier || bubbleData.tier) }}</span>
           <div class="bubble-level-dots">
             <div v-for="(t, i) in bubbleAllTiers" :key="t" class="bubble-level-dot" :class="{ active: i <= bubbleCurIdx, current: i === bubbleCurIdx }" :style="{ borderColor: tierBorder(t), background: i <= bubbleCurIdx ? tierBorder(t) : 'transparent', color: tierBorder(t) }" :title="t" />
           </div>
         </div>
         <div :class="bubbleIsMax ? 'bubble-upgrade max-tier' : 'bubble-upgrade'" @click="doUpgrade">
-          {{ bubbleIsMax ? ' 重置为 ' + bubbleAllTiers[0] : '⬆ 升级至' }}
-          <span v-if="!bubbleIsMax" :style="{ color: tierBorder(bubbleNextTier), fontWeight: 700 }">{{ bubbleNextTier }}</span>
+          {{ bubbleIsMax ? ' 重置为 ' + tierDisplay(bubbleAllTiers[0]) : '⬆ 升级至' }}
+          <span v-if="!bubbleIsMax" :style="{ color: tierBorder(bubbleNextTier), fontWeight: 700 }">{{ tierDisplay(bubbleNextTier) }}</span>
         </div>
       </div>
     </template>
@@ -231,6 +231,8 @@ const bubbleAttrs = computed(() => bubbleAttrEntries())
 
 // Helpers
 function tagZh(t) { return TAG_ZH[t] || t }
+const TIER_DISPLAY_ZH = { '铜': '青铜', '银': '白银', '金': '黄金', '钻石': '钻石', '传说': '传奇' }
+function tierDisplay(t) { return TIER_DISPLAY_ZH[t] || t }
 function sizeColor(s) { return BOARD_SIZE_COLOR[s] || '#888' }
 function sizeLabel(s) { return BOARD_SIZE_LABEL[s] || 'S' }
 function tierStyle(tier) {
@@ -264,18 +266,61 @@ const TIER_ATTR_ZH = {
 }
 const TIME_KEYS = new Set(['冷却时间(ms)', 'HasteAmount', 'SlowAmount', 'FreezeAmount'])
 
+function getEffectiveAttrs(baseAttrs, tierLevels, currentTier) {
+  const result = Object.assign({}, baseAttrs)
+  const allTiers = Object.keys(tierLevels || {})
+  const curIdx = allTiers.indexOf(currentTier)
+  const applyUpTo = curIdx >= 0 ? curIdx : allTiers.length - 1
+  for (let i = 0; i <= applyUpTo && i < allTiers.length; i++) {
+    const td = tierLevels[allTiers[i]]
+    if (!td) continue
+    const changes = td['属性变更']
+    if (changes && changes !== '无变更' && typeof changes === 'object') {
+      Object.entries(changes).forEach(function([k, v]) { result[k] = v })
+    }
+  }
+  return result
+}
+function fmtAttrVal(k, v) {
+  if (TIME_KEYS.has(k) && typeof v === 'number' && v > 0) {
+    var sec = v / 1000
+    return (sec % 1 === 0 ? sec.toFixed(0) : sec.toFixed(1)) + 's'
+  }
+  return v
+}
 function bubbleAttrEntries() {
   if (!bubbleData.value) return []
-  const attrs = bubbleData.value.baseAttrs || {}
-  return Object.entries(attrs)
-    .filter(([k]) => !k.startsWith('自定义属性') && k !== '出售价格' && k !== '购买价格')
+  var d = bubbleData.value
+  var baseAttrs = d.baseAttrs || {}
+  var tierLevels = d.tierLevels || {}
+  var currentTier = d.currentTier || d.tier
+  var eff = getEffectiveAttrs(baseAttrs, tierLevels, currentTier)
+  var allTiers = Object.keys(tierLevels)
+  var curIdx = allTiers.indexOf(currentTier)
+  var nextEff = null
+  if (curIdx >= 0 && curIdx < allTiers.length - 1) {
+    var nextTier = allTiers[curIdx + 1]
+    var nextTd = tierLevels[nextTier]
+    var nextChanges = nextTd ? nextTd['属性变更'] : null
+    if (nextChanges && nextChanges !== '无变更' && typeof nextChanges === 'object') {
+      nextEff = Object.assign({}, eff)
+      Object.entries(nextChanges).forEach(function([k, v]) { nextEff[k] = v })
+    }
+  }
+  return Object.entries(eff)
+    .filter(function([k]) { return !k.startsWith('自定义属性') && k !== '出售价格' && k !== '购买价格' })
     .slice(0, 8)
-    .map(([k, v]) => ({
-      label: TIER_ATTR_ZH[k] || k,
-      value: TIME_KEYS.has(k) && typeof v === 'number' && v > 0
-        ? (v / 1000 % 1 === 0 ? (v / 1000).toFixed(0) : (v / 1000).toFixed(1)) + 's'
-        : v
-    }))
+    .map(function([k, v]) {
+      var nextVal = null
+      if (nextEff && nextEff[k] !== undefined && nextEff[k] !== v) {
+        nextVal = fmtAttrVal(k, nextEff[k])
+      }
+      return {
+        label: TIER_ATTR_ZH[k] || k,
+        value: fmtAttrVal(k, v),
+        nextVal: nextVal
+      }
+    })
 }
 
 // Load items
