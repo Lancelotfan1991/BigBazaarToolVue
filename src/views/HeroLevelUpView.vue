@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="levelup-view active">
     <div class="back-bar">
       <button class="back-btn" @click="router.push('/')">← 返回</button>
@@ -46,13 +46,8 @@
                   <span class="lu-card-tier" :class="'tier-' + (card.BaseTier || '').toLowerCase()">{{ tierZh(card.BaseTier) }}</span>
                 </div>
                 <div class="lu-card-type">{{ typeZh(card.Type) }}</div>
-                <div class="lu-card-desc">{{ cardDesc(card) }}</div>
-                <div v-if="card.TooltipReplacements && Object.keys(card.TooltipReplacements).length" class="lu-card-tooltip">
-                  <span v-for="(val, key) in card.TooltipReplacements" :key="key" class="tooltip-item">
-                    {{ key }}: {{ typeof val === 'object' ? (val.Fixed || val.mod || JSON.stringify(val)) : val }}
-                  </span>
-                </div>
-                <div v-if="card.EventOptionPoolTemplates && card.EventOptionPoolTemplates.length" class="lu-card-options">
+                <div class="lu-card-desc">{{ resolveDesc(card) }}</div>
+                                <div v-if="card.EventOptionPoolTemplates && card.EventOptionPoolTemplates.length" class="lu-card-options">
                   <div class="options-label">选项：</div>
                   <div v-for="(opt, oi) in card.EventOptionPoolTemplates" :key="oi" class="option-chip">
                     <img v-if="opt.art" :src="opt.art" class="option-art" loading="lazy">
@@ -220,9 +215,15 @@ const DESC_ZH = {
 }
 
 function cardTitle(card) { return TITLE_ZH[card.Title.Text] || card.Title.Text }
-function cardDesc(card) {
+function resolveDesc(card) {
   const raw = card.Description?.Text || ''
-  return DESC_ZH[raw] || raw
+  let text = DESC_ZH[raw] || raw
+  const tr = card.TooltipReplacements || {}
+  for (const [key, val] of Object.entries(tr)) {
+    const v = (val && typeof val === 'object') ? (val.Fixed || val.mod || '') : (val || '')
+    text = text.split(key).join(String(v))
+  }
+  return text
 }
 
 function toggleLevel(level) {
