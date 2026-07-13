@@ -85,9 +85,19 @@ export const useDataStore = defineStore('data', () => {
     return allItemsCache.value
   }
 
+  const levelUpData = ref(null)
+
+  async function loadLevelUpOptions() {
+    if (levelUpData.value) return levelUpData.value
+    const resp = await fetch(`${DATA_DIR.value}/heroLevelUpOptions.json`)
+    levelUpData.value = await resp.json()
+    return levelUpData.value
+  }
+
   async function switchSeason(val) {
     season.value = val
     allItemsCache.value = null
+    levelUpData.value = null
     if (currentHero.value?.name_en) {
       const name = currentHero.value.name_en
       if (['events', 'monsters', 'trainers', 'merchants'].includes(name)) {
@@ -107,9 +117,9 @@ export const useDataStore = defineStore('data', () => {
   }
 
   return {
-    heroesList, currentHero, currentData, season, allItemsCache,
+    heroesList, currentHero, currentData, season, allItemsCache, levelUpData,
     DATA_DIR, HERO_DISPLAY, TIER_ORDER, TIER_ZH, TIER_ZH_REV, SIZE_ZH, SIZE_ORDER,
-    loadHeroes, loadHeroData, loadGameData, ensureAllItemsCache, switchSeason, reset
+    loadHeroes, loadHeroData, loadGameData, ensureAllItemsCache, loadLevelUpOptions, switchSeason, reset
   }
 })
 

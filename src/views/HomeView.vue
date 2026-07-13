@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="hero-selector">
     <h2>📚 选择职业</h2>
     <div class="hero-grid">
@@ -33,6 +33,21 @@
             </div><div class="gd-count">
               {{ g.count }}
             </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="game-data-card tool-card"
+        @click="router.push('/levelup')"
+      >
+        <div class="gd-icon">
+          ⬆️
+        </div>
+        <div class="gd-info">
+          <div class="gd-name">
+            英雄升级选项
+          </div><div class="gd-desc">
+            每级升级奖励 · 按英雄筛选
           </div>
         </div>
       </div>
