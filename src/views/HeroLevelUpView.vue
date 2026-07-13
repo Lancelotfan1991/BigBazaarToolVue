@@ -19,6 +19,14 @@
         </button>
       </div>
 
+      <div class="filter-bar">
+        <label class="filter-toggle">
+          <input type="checkbox" v-model="showInspired">
+          <span>显示"受X启发"事件</span>
+        </label>
+        <span class="filter-hint">（非本英雄专属的通用插槽解锁事件，如"受卡诺克启发"等）</span>
+      </div>
+
       <div class="levelup-body">
         <div v-for="section in filteredSections" :key="section.level" class="level-section">
           <div class="level-header" @click="toggleLevel(section.level)">
@@ -28,7 +36,10 @@
           </div>
           <div v-if="openLevels.has(section.level)" class="level-cards">
             <div v-for="card in section.cards" :key="card.Id + card.Title.Text" class="lu-card">
-              <img v-if="card.Art" :src="card.Art" class="lu-card-art" :alt="card.Title.Text" loading="lazy">
+              <div class="lu-card-art-wrap">
+                <img v-if="card.Art" :src="card.Art" class="lu-card-art-bg" :alt="card.Title.Text" loading="lazy">
+                <img v-if="card.ArtFg" :src="card.ArtFg" class="lu-card-art-fg" :alt="card.Title.Text" loading="lazy">
+              </div>
               <div class="lu-card-body">
                 <div class="lu-card-top">
                   <span class="lu-card-title">{{ cardTitle(card) }}</span>
@@ -70,6 +81,7 @@ const router = useRouter()
 const dataStore = useDataStore()
 const loading = ref(true)
 const selectedHero = ref('全部')
+const showInspired = ref(false)
 const openLevels = reactive(new Set())
 const rawData = ref(null)
 
@@ -217,14 +229,21 @@ function toggleLevel(level) {
   openLevels.has(level) ? openLevels.delete(level) : openLevels.add(level)
 }
 
+function isInspiredCard(card) {
+  return (card.Title.Text || '').startsWith('Inspired by')
+}
+
 const filteredSections = computed(() => {
   if (!rawData.value) return []
   const hero = selectedHero.value
+  const inspired = showInspired.value
   return rawData.value.sections
     .map(section => {
       const cards = section.cards.filter(c => {
+        if (!inspired && isInspiredCard(c)) return false
         if (hero === '全部') return true
-        return (c.Heroes || []).includes(hero)
+        const heroes = c.Heroes || []
+        return heroes.includes(hero) || heroes.includes('Common')
       })
       return cards.length ? { ...section, cards } : null
     })
@@ -253,6 +272,17 @@ onMounted(async () => {
 }
 .hero-tab.active { background: var(--primary); color: #fff; border-color: var(--primary); }
 
+.filter-bar {
+  display: flex; align-items: center; gap: 8px; padding: 0 16px 8px;
+  font-size: 12px; color: var(--text2); flex-wrap: wrap;
+}
+.filter-toggle {
+  display: flex; align-items: center; gap: 6px; cursor: pointer;
+  color: var(--text); font-weight: 500;
+}
+.filter-toggle input { width: 16px; height: 16px; accent-color: var(--primary); }
+.filter-hint { font-size: 11px; color: var(--text2); opacity: .7; }
+
 .levelup-body { padding: 0 16px 80px; }
 
 .level-section { margin-bottom: 8px; }
@@ -276,9 +306,17 @@ onMounted(async () => {
 }
 .lu-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.12); }
 
-.lu-card-art {
-  width: 64px; height: 64px; border-radius: 8px; object-fit: cover;
-  flex-shrink: 0;
+.lu-card-art-wrap {
+  position: relative; width: 64px; height: 64px;
+  border-radius: 8px; overflow: hidden; flex-shrink: 0;
+}
+.lu-card-art-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover;
+}
+.lu-card-art-fg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: contain; z-index: 1;
 }
 
 .lu-card-body { flex: 1; min-width: 0; }
