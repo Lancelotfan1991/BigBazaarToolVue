@@ -1,12 +1,12 @@
-<template>
+﻿<template>
   <div
     ref="gridRef"
     class="cards-grid"
   >
     <template v-if="filteredCards.length">
       <ItemCard
-        v-for="card in visibleCards"
-        :key="card['英文名'] || card['name']"
+        v-for="(card, idx) in visibleCards"
+        :key="(card['英文名'] || card['name']) + '_' + (card['基础品质'] || '') + '_' + (card['怪物信息']?.['出现天数'] ?? '') + '_' + idx"
         :card="card"
         :is-game-data="isGameData"
         :update-badge="getBadge(card)"
