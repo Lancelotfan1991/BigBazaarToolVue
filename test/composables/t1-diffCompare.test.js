@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from 'vitest'
+﻿import { describe, it, expect, beforeEach } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 import { useDiffCompare } from '@/composables/useDiffCompare'
 
@@ -61,7 +61,7 @@ describe('T0: buildDiffMap 差异详情构建', () => {
       makeItem({ '效果说明': ['旧效果'] })
     )
     expect(dm.tooltips).toBeDefined()
-    expect(dm.tooltips['0']).toEqual({ old: '旧效果', new: '新效果' })
+    expect(dm.tooltips['0']).toEqual({ old: '旧效果', new: '新效果', type: '' })
   })
 
   it('无变更时返回空对象', () => {

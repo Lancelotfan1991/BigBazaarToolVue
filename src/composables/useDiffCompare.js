@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+﻿import { ref } from 'vue'
 import { useDataStore } from '@/stores/dataStore'
 
 function isEmpty(v) {
@@ -68,7 +68,9 @@ function buildDiffMap(newItem, oldItem) {
   for (let i = 0; i < maxT; i++) {
     if (ttext(nt[i]) !== ttext(ot[i])) {
       if (!d.tooltips) d.tooltips = {}
-      d.tooltips[i] = { old: ttext(ot[i]), new: ttext(nt[i]) }
+      const ntType = typeof nt[i] === 'object' ? (nt[i].type || '') : ''
+      const otType = typeof ot[i] === 'object' ? (ot[i].type || '') : ''
+      d.tooltips[i] = { old: ttext(ot[i]), new: ttext(nt[i]), type: otType || ntType }
     }
   }
   // Tier levels

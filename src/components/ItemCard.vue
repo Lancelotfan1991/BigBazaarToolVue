@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div
     class="card"
     :class="[cardClass, { 'has-link': !!fullLink }]"
@@ -375,16 +375,28 @@ const attrEntries = computed(() =>
 // Tooltips
 const rawTooltips = computed(() => props.card['\u6548\u679c\u8bf4\u660e'] || props.card['tooltips'] || [])
 const tooltipLines = computed(() => {
-  return rawTooltips.value.map((t, i) => {
-    const text = typeof t === 'object' ? (t.text || '') : t
+  const diffTooltips = props.diffDetails?.tooltips || {}
+  const diffIndices = Object.keys(diffTooltips).map(Number).filter(n => !isNaN(n))
+  const maxLen = Math.max(rawTooltips.value.length, ...diffIndices.map(n => n + 1), 0)
+  const result = []
+  for (let i = 0; i < maxLen; i++) {
+    const t = rawTooltips.value[i]
+    const text = typeof t === 'object' ? (t.text || '') : (typeof t === 'string' ? t : '')
     const tipType = typeof t === 'object' ? (t.type || '') : ''
-    const resolved = text.replace(/\{(ability|aura)\.(\d+)(?:\.\w+)?\}/g, (m, _type, idx) => {
-      const key = '\u81ea\u5b9a\u4e49\u5c5e\u6027' + idx
+    const resolved = text ? text.replace(/\{(ability|aura)\.(\d+)(?:\.\w+)?\}/g, (m, _type, idx) => {
+      const key = '自定义属性' + idx
       return attrs.value[key] != null ? attrs.value[key] : m
-    })
-    const diffEntry = props.diffDetails?.tooltips?.[i]
-    return resolved ? { type: tipType, text: resolved, diffOld: diffEntry?.old || '' } : null
-  }).filter(Boolean)
+    }) : ''
+    const diffEntry = diffTooltips[i]
+    if (resolved || diffEntry) {
+      result.push({
+        type: tipType || (diffEntry?.type || ''),
+        text: resolved || (diffEntry?.new != null ? diffEntry.new : ''),
+        diffOld: diffEntry?.old || ''
+      })
+    }
+  }
+  return result
 })
 
 // Tier levels
