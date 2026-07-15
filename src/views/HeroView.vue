@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="content-area active">
     <div class="back-bar">
       <button
@@ -45,7 +45,7 @@
 <script setup>
 import { ref, computed, watch, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useDataStore } from '@/stores/dataStore'
+import { useDataStore, TAG_ZH } from '@/stores/dataStore'
 import { useFilterStore } from '@/stores/filterStore'
 import { useCardFilter } from '@/composables/useCardFilter'
 import { useDiffCompare } from '@/composables/useDiffCompare'
@@ -61,7 +61,6 @@ const filterStore = useFilterStore()
 const { matchFilters, sortCards } = useCardFilter()
 const { loadPrevSeason, isCardUpdated, getCardUpdateStatus, getCardDiffDetails, reset: resetDiff } = useDiffCompare()
 
-const TAG_ZH = {}
 const isUpdating = ref(false)
 const tags = ref([])
 const isGameData = computed(() => ['events','monsters','trainers','merchants'].includes(route.params.name))
