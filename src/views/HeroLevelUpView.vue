@@ -71,6 +71,7 @@
 import { ref, computed, reactive, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useDataStore, HERO_DISPLAY, TIER_ZH } from '@/stores/dataStore'
+import { resolvePlaceholders } from '@/composables/usePlaceholder'
 
 const router = useRouter()
 const dataStore = useDataStore()
@@ -217,13 +218,8 @@ const DESC_ZH = {
 function cardTitle(card) { return TITLE_ZH[card.Title.Text] || card.Title.Text }
 function resolveDesc(card) {
   const raw = card.Description?.Text || ''
-  let text = DESC_ZH[raw] || raw
-  const tr = card.TooltipReplacements || {}
-  for (const [key, val] of Object.entries(tr)) {
-    const v = (val && typeof val === 'object') ? (val.Fixed || val.mod || '') : (val || '')
-    text = text.split(key).join(String(v))
-  }
-  return text
+  const text = DESC_ZH[raw] || raw
+  return resolvePlaceholders(text, card.TooltipReplacements || {})
 }
 
 function toggleLevel(level) {

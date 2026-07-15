@@ -1,4 +1,4 @@
-
+﻿
 import { describe, it, expect, beforeEach } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 import { useFilterStore } from '@/stores/filterStore'
@@ -36,6 +36,8 @@ describe('T0 - filterStore 核心行为', () => {
     expect(store.searchQuery).toBe('')
     expect(store.currentScope).toBe('all')
     expect(store.showUpdatedOnly).toBe(false)
+    expect(store.currentTab).toBe('items')
+    expect(store.sortBy).toBe('name')
   })
 
   it('当调用 toggleFilter("hero", "海盗") 时，activeFilters.hero 包含 "海盗"', () => {

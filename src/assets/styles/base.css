@@ -195,22 +195,23 @@
     /* Filters */
     .filters {
       background: var(--surface);
-      border-radius: 10px;
-      padding: 12px;
+      border-radius: 12px;
+      padding: 14px 14px 5px;
       margin-bottom: 12px;
       border: 1px solid var(--border);
     }
 
     .filter-row {
       display: flex;
-      gap: 8px;
+      gap: 6px;
       flex-wrap: wrap;
       align-items: center;
-      margin-bottom: 8px;
+      margin-bottom: 9px;
+      min-height: 30px;
     }
 
     .filter-row:last-child {
-      margin-bottom: 0;
+      margin-bottom: 5px;
     }
 
     .search-box {
@@ -221,32 +222,37 @@
 
     .search-box input {
       width: 100%;
-      padding: 8px 10px 8px 32px;
+      padding: 9px 12px 9px 34px;
       background: var(--surface2);
       border: 1px solid var(--border);
       border-radius: 8px;
       color: var(--text);
       font-size: 14px;
       outline: none;
+      transition: border-color 0.2s;
     }
 
     .search-box input:focus {
       border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(108,114,203,0.15);
     }
 
     .search-box::before {
       content: '🔍';
       position: absolute;
-      left: 8px;
+      left: 10px;
       top: 50%;
       transform: translateY(-50%);
-      font-size: 13px;
+      font-size: 14px;
+      pointer-events: none;
     }
 
     .filter-label {
-      font-size: 11px;
+      font-size: 12px;
       color: var(--text2);
-      font-weight: 500;
+      font-weight: 600;
+      white-space: nowrap;
+      user-select: none;
     }
 
     .filter-group {
@@ -256,14 +262,20 @@
     }
 
     .filter-btn {
-      padding: 5px 10px;
+      padding: 5px 11px;
       background: var(--surface2);
       border: 1px solid var(--border);
-      border-radius: 6px;
+      border-radius: 7px;
       color: var(--text2);
       cursor: pointer;
       font-size: 12px;
       transition: all 0.15s;
+      white-space: nowrap;
+    }
+
+    .filter-btn:hover {
+      background: var(--border);
+      color: var(--text);
     }
 
     .filter-btn:active {
@@ -280,7 +292,7 @@
       padding: 6px 8px;
       background: var(--surface2);
       border: 1px solid var(--border);
-      border-radius: 6px;
+      border-radius: 7px;
       color: var(--text);
       font-size: 12px;
       outline: none;
@@ -293,7 +305,7 @@
       margin-bottom: 12px;
       background: var(--surface);
       padding: 4px;
-      border-radius: 10px;
+      border-radius: 12px;
       border: 1px solid var(--border);
     }
 
@@ -303,7 +315,7 @@
       font-size: 14px;
       font-weight: 500;
       color: var(--text2);
-      border-radius: 6px;
+      border-radius: 7px;
       transition: all 0.15s;
       flex: 1;
       text-align: center;
@@ -323,7 +335,7 @@
       font-size: 11px;
       background: rgba(255, 255, 255, 0.2);
       padding: 1px 6px;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-left: 4px;
     }
 
@@ -347,7 +359,7 @@
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 12px;
       transition: all 0.15s;
       position: relative;
@@ -467,7 +479,7 @@
       margin-top: 6px;
       padding: 6px 8px;
       background: rgba(var(--accent-rgb, 59,130,246), 0.08);
-      border-radius: 6px;
+      border-radius: 7px;
       font-weight: 500;
     }
 
@@ -483,7 +495,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      border-radius: 6px;
+      border-radius: 7px;
       margin-bottom: 4px;
       background: rgba(255,255,255,0.03);
       transition: background 0.15s;
@@ -568,7 +580,7 @@
     .card-icon {
       width: 44px;
       height: 44px;
-      border-radius: 6px;
+      border-radius: 7px;
       object-fit: cover;
       flex-shrink: 0;
       background: var(--surface2);
@@ -578,7 +590,7 @@
       position: relative;
       width: 44px;
       height: 44px;
-      border-radius: 6px;
+      border-radius: 7px;
       overflow: hidden;
       flex-shrink: 0;
       background: var(--surface2);
@@ -602,7 +614,7 @@
     .card-icon-fallback {
       width: 44px;
       height: 44px;
-      border-radius: 6px;
+      border-radius: 7px;
       background: var(--surface2);
       display: flex;
       align-items: center;
@@ -610,14 +622,6 @@
       font-size: 20px;
       flex-shrink: 0;
       color: var(--text2);
-    }
-
-    #tagFilters {
-      display: none;
-    }
-
-    #tagFilters.show {
-      display: flex;
     }
 
     .tag-filter-scroll {
@@ -677,7 +681,7 @@
     .game-data-card {
       background: var(--surface2);
       border: 1.5px solid var(--border);
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 10px 10px;
       cursor: pointer;
       transition: all 0.15s ease;
@@ -733,7 +737,7 @@
       width: 40px;
       height: 40px;
       font-size: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     .game-data-card.tool-sim .gd-icon { background: rgba(108,114,203,0.15); }
@@ -760,7 +764,7 @@
       padding: 12px 14px;
       background: var(--surface2);
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 12px;
       text-decoration: none;
       color: var(--text);
       transition: all 0.2s;
@@ -1315,7 +1319,7 @@
       padding: 6px 8px;
       background: var(--surface2);
       border: 1px solid var(--border);
-      border-radius: 6px;
+      border-radius: 7px;
       color: var(--text);
       font-size: 12px;
       outline: none;
@@ -1325,7 +1329,7 @@
       padding: 6px 8px;
       background: var(--surface2);
       border: 1px solid var(--border);
-      border-radius: 6px;
+      border-radius: 7px;
       color: var(--text);
       font-size: 12px;
       outline: none;
@@ -1440,7 +1444,7 @@
     }
     .board-search-item:hover { background: var(--surface); }
     .board-search-item .bsi-img {
-      width: 40px; height: 40px; border-radius: 6px; object-fit: cover;
+      width: 40px; height: 40px; border-radius: 7px; object-fit: cover;
       flex-shrink: 0; background: var(--surface);
     }
     .board-search-item .bsi-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
@@ -1633,7 +1637,7 @@
     .bubble-close:hover { color: #e74c3c; background: rgba(231,76,60,0.1); }
     .bubble-header { display: flex; gap: 12px; align-items: center; }
     .bubble-img {
-      width: 56px; height: 56px; border-radius: 10px;
+      width: 56px; height: 56px; border-radius: 12px;
       object-fit: cover; flex-shrink: 0;
       border: 2px solid var(--border);
     }
@@ -1669,7 +1673,7 @@
     }
     .bubble-attr-item {
       display: flex; justify-content: space-between; align-items: center;
-      padding: 5px 8px; border-radius: 6px;
+      padding: 5px 8px; border-radius: 7px;
       background: var(--surface2); font-size: 12px;
     }
     .bubble-attr-label {
@@ -1701,7 +1705,7 @@
     .bubble-level-dot.current { transform: scale(1.3); box-shadow: 0 0 6px currentColor; }
     .bubble-upgrade {
       margin-top: 10px; text-align: center;
-      padding: 8px 14px; border-radius: 10px;
+      padding: 8px 14px; border-radius: 12px;
       background: linear-gradient(135deg, var(--accent), #2ecc71);
       border: none; font-size: 13px; font-weight: 600;
       color: #fff; cursor: pointer; transition: all 0.15s;
@@ -1785,7 +1789,7 @@
     .board-removed h4 { color: var(--text2); font-size: 13px; margin-bottom: 6px; }
     .board-removed-item {
       display: inline-block; padding: 4px 10px; margin: 3px;
-      border-radius: 6px; font-size: 12px; cursor: pointer;
+      border-radius: 7px; font-size: 12px; cursor: pointer;
       border: 1px solid var(--border); background: var(--surface2);
     }
     .board-removed-item:hover { background: var(--surface); }
@@ -1799,7 +1803,7 @@
 
     .sim-scenario-btn {
       padding: 6px 12px;
-      border-radius: 6px;
+      border-radius: 7px;
       border: 1px solid var(--accent);
       background: transparent;
       color: var(--accent);
@@ -1839,7 +1843,7 @@
   padding: 30px 20px;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 10px;
 }
 .updating-overlay p {

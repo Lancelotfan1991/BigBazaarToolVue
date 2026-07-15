@@ -79,6 +79,17 @@ describe('T0: buildDiffMap 差异详情构建', () => {
     )
     expect(dm.attrs['ReloadAmount']).toEqual({ old: null, new: 10 })
   })
+
+  it('效果说明条目被删除时应记录 diff 且 new 为空字符串', () => {
+    const { buildDiffMap } = useDiffCompare()
+    const dm = buildDiffMap(
+      makeItem({ '效果说明': ['保留的效果'] }),
+      makeItem({ '效果说明': ['保留的效果', '被删除的旧效果'] })
+    )
+    expect(dm.tooltips).toBeDefined()
+    expect(dm.tooltips['0']).toBeUndefined()
+    expect(dm.tooltips['1']).toEqual({ old: '被删除的旧效果', new: '', type: '' })
+  })
 })
 
 describe('T1: getCardDiffDetails 数据流', () => {

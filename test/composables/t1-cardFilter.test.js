@@ -1,4 +1,4 @@
-
+﻿
 import { describe, it, expect, beforeEach } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 import { useFilterStore } from '@/stores/filterStore'
@@ -29,6 +29,12 @@ describe('T1 - 过滤排序逻辑', () => {
   it('当搜索关键词匹配物品名称时，matchFilters 返回 true', () => {
     filterStore.searchQuery = '测试'
     expect(cardFilter.matchFilters(mockCard())).toBe(true)
+  })
+
+  it('文本搜索应能通过标签英文名匹配物品', () => {
+    filterStore.searchQuery = 'Weapon'
+    expect(cardFilter.matchFilters(mockCard({ '显示标签': ['Weapon'] }))).toBe(true)
+    expect(cardFilter.matchFilters(mockCard({ '显示标签': ['Food'] }))).toBe(false)
   })
 
   it('当搜索关键词不匹配任何字段时，matchFilters 返回 false', () => {
@@ -70,6 +76,25 @@ describe('T1 - 过滤排序逻辑', () => {
     expect(cardFilter.matchFilters(mockCard())).toBe(true)
   })
 
+
+  it('当 resetFilters 后 currentTab 重置为 items，标签过滤应正常工作', () => {
+    filterStore.setTab('skills')
+    filterStore.toggleFilter('tag', 'Weapon')
+    filterStore.resetFilters()
+    expect(filterStore.currentTab).toBe('items')
+    expect(filterStore.activeFilters.tag.size).toBe(0)
+    filterStore.toggleFilter('tag', 'Weapon')
+    expect(cardFilter.matchFilters(mockCard())).toBe(true)
+    expect(cardFilter.matchFilters(mockCard({ '显示标签': ['Potion'] }))).toBe(false)
+  })
+
+  it('标签过滤器同时匹配多个标签时，任一匹配即通过', () => {
+    filterStore.toggleFilter('tag', 'Weapon')
+    filterStore.toggleFilter('tag', 'Tech')
+    expect(cardFilter.matchFilters(mockCard({ '显示标签': ['Weapon'] }))).toBe(true)
+    expect(cardFilter.matchFilters(mockCard({ '显示标签': ['Tech'] }))).toBe(true)
+    expect(cardFilter.matchFilters(mockCard({ '显示标签': ['Food'] }))).toBe(false)
+  })
   it('当 sortBy 为 day 时，按出现天数升序排序', () => {
     filterStore.sortBy = 'day'
     const cards = [

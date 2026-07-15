@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+﻿import { defineStore } from 'pinia'
 import { ref, reactive } from 'vue'
 
 export const useFilterStore = defineStore('filter', () => {
@@ -36,6 +36,8 @@ export const useFilterStore = defineStore('filter', () => {
     activeFilters.hero.clear()
     searchQuery.value = ''
     currentScope.value = 'all'
+    currentTab.value = 'items'
+    sortBy.value = 'name'
     showUpdatedOnly.value = false
   }
 
