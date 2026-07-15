@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="filters">
     <div class="filter-row">
       <div class="search-box">
@@ -82,6 +82,8 @@
       >
         {{ filterStore.showUpdatedOnly ? '✅ 仅查看更新物品' : '🆕 仅查看更新物品' }}
       </button>
+    </div>
+    <div class="filter-row">
       <span class="filter-label">品质:</span>
       <div class="filter-group">
         <button
@@ -94,20 +96,23 @@
           {{ t }}
         </button>
       </div>
-      <template v-if="!hideSizeFilter">
-        <span class="filter-label">大小:</span>
-        <div class="filter-group">
-          <button
-            v-for="s in ['小型','中型','大型']"
-            :key="s"
-            class="filter-btn"
-            :class="{ active: filterStore.activeFilters.size.has(s) }"
-            @click="filterStore.toggleFilter('size', s)"
-          >
-            {{ s[0] }}
-          </button>
-        </div>
-      </template>
+    </div>
+    <div
+      v-if="!hideSizeFilter"
+      class="filter-row"
+    >
+      <span class="filter-label">大小:</span>
+      <div class="filter-group">
+        <button
+          v-for="s in ['小型','中型','大型']"
+          :key="s"
+          class="filter-btn"
+          :class="{ active: filterStore.activeFilters.size.has(s) }"
+          @click="filterStore.toggleFilter('size', s)"
+        >
+          {{ s[0] }}
+        </button>
+      </div>
     </div>
     <div
       v-if="showHeroFilter && heroList.length"
