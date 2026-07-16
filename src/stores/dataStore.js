@@ -39,6 +39,10 @@ export const TAG_ZH = {
   'Toy': '玩具', 'Trap': '陷阱', 'Weapon': '武器', 'Tool': '工具'
 }
 
+export const TIME_KEYS = new Set([
+  '冷却时间(ms)', 'HasteAmount', 'SlowAmount', 'FreezeAmount'
+])
+
 export const HERO_COLORS = {
   '海盗': '#48c6a9', '卡诺克': '#cb6c72', '杜利': '#6c72cb',
   '皮格马利安': '#cb9b6c', '马克': '#6ccbc0', '斯特尔': '#c06ccb',

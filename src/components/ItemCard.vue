@@ -267,8 +267,9 @@
 <script setup>
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
+import { fmtTimeVal } from '@/composables/useFormat'
 import {
-  TIER_ZH, SIZE_ZH, TIER_ATTR_ZH, TAG_ZH,
+  TIER_ZH, SIZE_ZH, TIER_ATTR_ZH, TAG_ZH, TIME_KEYS,
   HERO_COLORS, TIER_CLASS
 } from '@/stores/dataStore'
 import { useFilterStore } from '@/stores/filterStore'
@@ -346,17 +347,7 @@ const filteredAttrs = computed(() => {
   }
   return base
 })
-const TIME_KEYS = new Set([
-  '冷却时间(ms)', 'HasteAmount', 'SlowAmount', 'FreezeAmount'
-])
 
-function formatAttrValue(k, v) {
-  if (TIME_KEYS.has(k) && typeof v === 'number' && v > 0) {
-    const sec = v / 1000
-    return (sec % 1 === 0 ? sec.toFixed(0) : sec.toFixed(1)) + 's'
-  }
-  return v
-}
 
 const attrEntries = computed(() =>
   Object.entries(filteredAttrs.value)
@@ -366,8 +357,8 @@ const attrEntries = computed(() =>
       const oldVal = filteredAttrs.value[k + '_old']
       return {
         k, label: TIER_ATTR_ZH[k] || k,
-        v: formatAttrValue(k, v),
-        oldV: oldVal !== undefined ? formatAttrValue(k, oldVal) : null
+        v: fmtTimeVal(k, v),
+        oldV: oldVal !== undefined ? fmtTimeVal(k, oldVal) : null
       }
     })
 )
@@ -421,7 +412,7 @@ const tierLevelRows = computed(() => {
         .map(([k, v]) => {
           const oldV = td?.[k]
           const prefix = oldV != null ? '<span class="diff-old">' + (TIER_ATTR_ZH[k] || k) + ': ' + formatAttrValue(k, oldV) + '</span> → ' : ''
-          return prefix + (TIER_ATTR_ZH[k] || k) + ': <b class="' + (oldV != null ? 'diff-new' : '') + '">' + formatAttrValue(k, v) + '</b>'
+          return prefix + (TIER_ATTR_ZH[k] || k) + ': <b class="' + (oldV != null ? 'diff-new' : '') + '">' + fmtTimeVal(k, v) + '</b>'
         })
         .join(', ')
       return { name: tName, cls, html }

@@ -81,3 +81,169 @@ const MECHANICS_DATA = [
   ]}
 ]
 </script>
+
+<style scoped>
+/* Game Mechanics Viewer */
+  .mechanics-viewer {
+    display: none;
+  }
+
+  .mechanics-viewer.active {
+    display: block;
+  }
+
+  .mech-category {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .mech-cat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+  }
+
+  .mech-cat-header:active {
+    background: var(--surface2);
+  }
+
+  .mech-cat-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .mech-cat-title {
+    font-size: 16px;
+    font-weight: 600;
+    flex: 1;
+  }
+
+  .mech-cat-count {
+    font-size: 11px;
+    color: var(--text2);
+  }
+
+  .mech-cat-arrow {
+    font-size: 12px;
+    color: var(--text2);
+    transition: transform 0.3s;
+  }
+
+  .mech-category.open .mech-cat-arrow {
+    transform: rotate(90deg);
+  }
+
+  .mech-cat-body {
+    display: none;
+    padding: 0 12px 12px;
+  }
+
+  .mech-category.open .mech-cat-body {
+    display: block;
+  }
+
+  .mech-topic {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    padding: 12px;
+    overflow: hidden;
+  }
+
+  .mech-topic:last-child {
+    margin-bottom: 0;
+  }
+
+  .mech-topic-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mech-topic-content {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.7;
+  }
+
+  .mech-topic-content h4 {
+    font-size: 14px;
+    color: var(--text);
+    margin: 10px 0 4px;
+    font-weight: 600;
+  }
+
+  .mech-topic-content h4:first-child {
+    margin-top: 0;
+  }
+
+  .mech-topic-content ul {
+    padding-left: 18px;
+    margin: 4px 0;
+  }
+
+  .mech-topic-content li {
+    margin-bottom: 3px;
+  }
+
+  .mech-topic-content strong {
+    color: var(--accent2);
+    font-weight: 600;
+  }
+
+  .mech-topic-content em {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .mech-topic-content code {
+    background: var(--surface);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: monospace;
+    color: var(--gold);
+  }
+
+  .mech-topic-content .mech-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0;
+    font-size: 12px;
+  }
+
+  .mech-topic-content .mech-table th,
+  .mech-topic-content .mech-table td {
+    padding: 5px 8px;
+    border: 1px solid var(--border);
+    text-align: left;
+  }
+
+  .mech-topic-content .mech-table th {
+    background: var(--surface);
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .mech-topic-content .mech-note {
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    padding: 8px 10px;
+    border-radius: 0 6px 6px 0;
+    margin: 8px 0;
+    font-size: 12px;
+  }
+</style>
+

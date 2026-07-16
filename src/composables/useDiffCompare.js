@@ -1,5 +1,5 @@
 ﻿import { ref } from 'vue'
-import { useDataStore } from '@/stores/dataStore'
+import { useDataStore, TIME_KEYS } from '@/stores/dataStore'
 
 function isEmpty(v) {
   if (v === null || v === undefined || v === '') return true
@@ -31,12 +31,8 @@ function deepEqual(a, b) {
   return true
 }
 
-const TIME_ATTRS = new Set([
-  '冷却时间(ms)', 'HasteAmount', 'SlowAmount', 'FreezeAmount'
-])
-
 function fmtTime(k, v) {
-  if (TIME_ATTRS.has(k) && typeof v === 'number' && v > 0) {
+  if (TIME_KEYS.has(k) && typeof v === 'number' && v > 0) {
     const s = v / 1000; return (s % 1 === 0 ? s.toFixed(0) : s.toFixed(1)) + 's'
   }
   return v

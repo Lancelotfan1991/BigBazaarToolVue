@@ -1,6 +1,6 @@
-﻿<template>
+<template>
   <div class="app-footer">
-    <div>v2.7.25</div>
+    <div>v2.7.26</div>
     <div class="footer-data">
       数据来源：<a
         href="https://bazaardb.gg"
