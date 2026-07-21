@@ -724,7 +724,7 @@ if (typeof window !== 'undefined') {
     flex-direction: column;
   }
   .board-slot.occupied { border-style: solid; cursor: pointer; }
-  .board-item-overlay {
+  :deep(.board-item-overlay) {
     position: absolute; top: 2px; bottom: 2px;
     pointer-events: auto; z-index: 2;
     overflow: hidden; border-radius: 4px; cursor: grab;
@@ -733,7 +733,7 @@ if (typeof window !== 'undefined') {
     user-select: none;
     touch-action: none;
   }
-  .board-item-overlay .bio-img {
+  :deep(.board-item-overlay .bio-img) {
     width: 100%; height: 100%;
     position: absolute; top: 0; left: 0; z-index: 0;
     pointer-events: none;
@@ -743,7 +743,7 @@ if (typeof window !== 'undefined') {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
   }
-  .board-item-overlay .bio-name {
+  :deep(.board-item-overlay .bio-name) {
     position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
     font-size: 9px; font-weight: bold; color: #fff;
     text-align: center; white-space: nowrap;
@@ -964,7 +964,7 @@ if (typeof window !== 'undefined') {
   }
 
   /* Tier border on board overlay */
-  .bio-tier-border {
+  :deep(.bio-tier-border) {
     position: absolute; inset: 0; z-index: 3;
     border-radius: 4px; pointer-events: none;
     border: 3px solid transparent;
@@ -992,7 +992,7 @@ if (typeof window !== 'undefined') {
     box-shadow: 0 2px 12px rgba(0,0,0,0.4);
     border-radius: 20px;
   }
-  .board-item-overlay .bio-remove {
+  :deep(.board-item-overlay .bio-remove) {
     position: absolute; top: 2px; right: 2px; z-index: 5;
     font-size: 14px; cursor: pointer; pointer-events: auto;
     color: #fff; line-height: 1;
@@ -1000,8 +1000,8 @@ if (typeof window !== 'undefined') {
     width: 20px; height: 20px; display: flex;
     align-items: center; justify-content: center;
   }
-  .board-item-overlay .bio-remove:hover { color: #e74c3c; background: rgba(0,0,0,0.8); }
-  .board-item-overlay.is-dragging { opacity: 0.25; }
+  :deep(.board-item-overlay .bio-remove:hover) { color: #e74c3c; background: rgba(0,0,0,0.8); }
+  :deep(.board-item-overlay.is-dragging) { opacity: 0.25; }
   .board-drag-ghost {
     position: fixed; pointer-events: none; z-index: 10000;
     opacity: 0.85; border-radius: 4px; overflow: hidden;

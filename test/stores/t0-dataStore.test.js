@@ -11,8 +11,18 @@ describe('T0 - dataStore 核心行为', () => {
     store = useDataStore()
   })
 
-  it('当 season 为 "" 时，DATA_DIR 为 "/data-s16.1"', () => {
+  it('当 season 为 "" 时，DATA_DIR 为 "/data-s16.2"（最新）', () => {
     store.season = ''
+    expect(store.DATA_DIR).toBe('/data-s16.2')
+  })
+
+  it('当 season 为 "s16.2" 时，DATA_DIR 为 "/data-s16.2"', () => {
+    store.season = 's16.2'
+    expect(store.DATA_DIR).toBe('/data-s16.2')
+  })
+
+  it('当 season 为 "s16.1" 时，DATA_DIR 为 "/data-s16.1"', () => {
+    store.season = 's16.1'
     expect(store.DATA_DIR).toBe('/data-s16.1')
   })
 
