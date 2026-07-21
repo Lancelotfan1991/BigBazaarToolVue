@@ -69,10 +69,6 @@
           v-if="sizeZh && currentTab === 'items'"
           class="badge badge-size"
         >{{ sizeZh }}</span>
-        <span
-          v-if="type"
-          class="badge badge-type"
-        >{{ typeZh }}</span>
       </div>
     </div>
     <div
@@ -293,11 +289,6 @@ const tier = computed(() => props.card['\u57fa\u7840\u54c1\u8d28'] || '')
 const tierZh = computed(() => TIER_ZH[tier.value] || tier.value)
 const tierCls = computed(() => TIER_CLASS[normTier(tier.value)] || '')
 const sizeZh = computed(() => SIZE_ZH[props.card['\u5927\u5c0f']] || props.card['\u5927\u5c0f'] || '')
-const type = computed(() => props.card['\u7c7b\u578b'] || props.card['type'] || '')
-const typeZh = computed(() => {
-  const t = type.value
-  return t === 'Item' ? '\u7269\u54c1' : t === 'Skill' ? '\u6280\u80fd' : t
-})
 const imgSrc = computed(() => props.card['\u56fe\u7247\u94fe\u63a5'] || props.card['art_large'] || props.card['art'] || '')
 const fgSrc = computed(() => imgSrc.value ? imgSrc.value.replace(/(@\d+)/, '_p$1') : '')
 const fallbackChar = computed(() => (name.value || '?')[0])
