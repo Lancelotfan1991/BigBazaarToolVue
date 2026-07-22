@@ -38,7 +38,59 @@ function fmtTime(k, v) {
   return v
 }
 
-function buildDiffMap(newItem, oldItem) {
+const PRICE_KEYS = new Set(['购买价格', '出售价格'])
+
+function canonAttrKey(k) {
+  if (k === '冷却时间(ms)' || k === '冷却时间(秒)') return '冷却时间(秒)'
+  if (k === '多重施法' || k === '多重释放') return '多重释放'
+  return k
+}
+
+function parseLeadingNumber(v) {
+  if (typeof v === 'number') return v
+  const m = /^\s*[-+]?[0-9]*\.?[0-9]+/.exec(String(v))
+  return m ? parseFloat(m[0]) : null
+}
+
+function canonAttrValue(k, v) {
+  const ck = canonAttrKey(k)
+  if (ck === '冷却时间(秒)') {
+    const num = parseLeadingNumber(v)
+    if (num === null) return v
+    const sec = k === '冷却时间(ms)' ? num / 1000 : num
+    return Math.round(sec * 10) / 10
+  }
+  if (ck === '多重释放') {
+    const num = parseLeadingNumber(v)
+    return num === null ? v : num
+  }
+  return v
+}
+
+function canonAttrs(attrs) {
+  const out = {}
+  for (const k of Object.keys(attrs || {})) {
+    if (PRICE_KEYS.has(k)) continue
+    out[canonAttrKey(k)] = canonAttrValue(k, attrs[k])
+  }
+  return out
+}
+
+function collectCanonAttrKeys(items) {
+  const s = new Set()
+  for (const it of items || []) {
+    const a = canonAttrs(it['基础属性'] || {})
+    for (const k of Object.keys(a)) s.add(k)
+  }
+  return s
+}
+
+function normTip(s) { return String(s || '').replace(/[\s+%]+/g, '') }
+function hasPlaceholder(s) { return /\{[^}]*\}/.test(String(s || '')) }
+
+function buildDiffMap(newItem, oldItem, opts = {}) {
+  const cross = !!opts.crossPipeline
+  const sharedAttrKeys = opts.sharedAttrKeys || null
   const d = {}
   // Basic fields
   for (const k of ['基础品质', '大小', '类型', '显示标签']) {
@@ -49,8 +101,14 @@ function buildDiffMap(newItem, oldItem) {
     }
   }
   // Attributes
-  const na = newItem['基础属性'] || {}, oa = oldItem['基础属性'] || {}
-  const akeys = new Set([...Object.keys(na), ...Object.keys(oa)])
+  let na = newItem['基础属性'] || {}, oa = oldItem['基础属性'] || {}
+  if (cross) { na = canonAttrs(na); oa = canonAttrs(oa) }
+  let akeys = new Set([...Object.keys(na), ...Object.keys(oa)])
+  if (cross) {
+    akeys = new Set([...akeys].filter(k =>
+      (k in na) && (k in oa) && (!sharedAttrKeys || sharedAttrKeys.has(k))
+    ))
+  }
   for (const k of akeys) {
     if (!deepEqual(na[k], oa[k])) {
       if (!d.attrs) d.attrs = {}
@@ -62,18 +120,33 @@ function buildDiffMap(newItem, oldItem) {
   const ttext = t => typeof t === 'object' ? (t.text || '') : String(t || '')
   const maxT = Math.max(nt.length, ot.length)
   for (let i = 0; i < maxT; i++) {
-    if (ttext(nt[i]) !== ttext(ot[i])) {
-      if (!d.tooltips) d.tooltips = {}
-      const ntType = typeof nt[i] === 'object' ? (nt[i].type || '') : ''
-      const otType = typeof ot[i] === 'object' ? (ot[i].type || '') : ''
-      d.tooltips[i] = { old: ttext(ot[i]), new: ttext(nt[i]), type: otType || ntType }
+    const nStr = ttext(nt[i]), oStr = ttext(ot[i])
+    if (cross) {
+      if (hasPlaceholder(nStr) || hasPlaceholder(oStr)) continue
+      if (normTip(nStr) === normTip(oStr)) continue
+    } else {
+      if (nStr === oStr) continue
     }
+    if (!d.tooltips) d.tooltips = {}
+    const ntType = typeof nt[i] === 'object' ? (nt[i].type || '') : ''
+    const otType = typeof ot[i] === 'object' ? (ot[i].type || '') : ''
+    d.tooltips[i] = { old: oStr, new: nStr, type: otType || ntType }
   }
   // Tier levels
   const ntl = newItem['品质层级'] || {}, otl = oldItem['品质层级'] || {}
-  for (const tier of new Set([...Object.keys(ntl), ...Object.keys(otl)])) {
-    const nc = ntl[tier]?.['属性变更'] || {}, oc = otl[tier]?.['属性变更'] || {}
-    for (const k of new Set([...Object.keys(nc), ...Object.keys(oc)])) {
+  const tierKeys = cross
+    ? Object.keys(ntl).filter(t => t in otl)
+    : [...new Set([...Object.keys(ntl), ...Object.keys(otl)])]
+  for (const tier of tierKeys) {
+    let nc = ntl[tier]?.['属性变更'] || {}, oc = otl[tier]?.['属性变更'] || {}
+    if (cross) { nc = canonAttrs(nc); oc = canonAttrs(oc) }
+    let ckeys = new Set([...Object.keys(nc), ...Object.keys(oc)])
+    if (cross) {
+      ckeys = new Set([...ckeys].filter(k =>
+        (k in nc) && (k in oc) && (!sharedAttrKeys || sharedAttrKeys.has(k))
+      ))
+    }
+    for (const k of ckeys) {
       if (!deepEqual(nc[k], oc[k])) {
         if (!d.tiers) d.tiers = {}
         if (!d.tiers[tier]) d.tiers[tier] = {}
@@ -81,8 +154,11 @@ function buildDiffMap(newItem, oldItem) {
       }
     }
   }
-  // Other fields
-  for (const k of ['所属职业', '描述', '事件描述', '事件选项', '怪物信息', '战斗奖励']) {
+  // Other fields (cross-pipeline: 所属职业 in s16.2 is unreliable, exclude)
+  const otherKeys = cross
+    ? ['描述', '事件描述', '事件选项', '怪物信息', '战斗奖励']
+    : ['所属职业', '描述', '事件描述', '事件选项', '怪物信息', '战斗奖励']
+  for (const k of otherKeys) {
     if (!deepEqual(newItem[k], oldItem[k])) {
       if (!d.other) d.other = []
       d.other.push(k)
@@ -128,18 +204,25 @@ export function useDiffCompare() {
     const s16Items = allCache?.['物品'] || []
     const s16Skills = allCache?.['技能'] || []
 
+    // Cross-pipeline normalization: s16.2 (RSC) vs s15 (旧 API) schema drift.
+    // 仅对比两个管道都存在的规范属性键（交集），排除价格，统一冷却单位。
+    const prevAttrKeys = collectCanonAttrKeys([...(prevSeasonData.value['物品'] || []), ...(prevSeasonData.value['技能'] || [])])
+    const curAttrKeys = collectCanonAttrKeys([...s16Items, ...s16Skills])
+    const sharedAttrKeys = new Set([...curAttrKeys].filter(k => prevAttrKeys.has(k)))
+    const diffOpts = { crossPipeline: true, sharedAttrKeys }
+
     for (const item of s16Items) {
       const key = item['英文名']
       if (!key) continue
       if (!prevItems[key]) { changedItemKeys.value.add(key); itemDiffMap.value.set(key, { isNew: true }); continue }
-      const dm = buildDiffMap(item, prevItems[key])
+      const dm = buildDiffMap(item, prevItems[key], diffOpts)
       if (Object.keys(dm).length) { changedItemKeys.value.add(key); itemDiffMap.value.set(key, dm) }
     }
     for (const skill of s16Skills) {
       const key = skill['英文名']
       if (!key) continue
       if (!prevSkills[key]) { changedSkillKeys.value.add(key); skillDiffMap.value.set(key, { isNew: true }); continue }
-      const dm = buildDiffMap(skill, prevSkills[key])
+      const dm = buildDiffMap(skill, prevSkills[key], diffOpts)
       if (Object.keys(dm).length) { changedSkillKeys.value.add(key); skillDiffMap.value.set(key, dm) }
     }
     console.log('[Diff] S16 vs S15:', changedItemKeys.value.size, '物品变更,', changedSkillKeys.value.size, '技能变更')
